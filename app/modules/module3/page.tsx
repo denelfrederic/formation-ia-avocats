@@ -19,73 +19,73 @@ export default function Module3() {
   const lessons = [
     {
       id: 0,
-      title: "Prompts juridiques efficaces",
-      duration: "25 min",
+      title: "🌵 NotebookLM : Bibliothèque juridique cactus",
+      duration: "30 min",
       content: {
-        overview: "Maîtrisez l'art de créer des prompts spécialisés pour obtenir des résultats précis et pertinents dans le contexte juridique.",
+        overview: "💚 Transformez NotebookLM en votre bibliothèque juridique personnelle : stockez, organisez et interrogez tous vos documents de référence avec la puissance du cactus !",
         objectives: [
-          "Comprendre la structure d'un prompt juridique efficace",
-          "Adapter le langage et le contexte selon le domaine de droit",
-          "Créer des templates de prompts réutilisables"
+          "🧠 Comprendre l'architecture et les capacités de NotebookLM",
+          "🌱 Créer votre première base de connaissances juridiques",
+          "📚 Importer et organiser vos documents de référence"
         ],
         keyPoints: [
-          "Un prompt bien structuré améliore la qualité des réponses de 70%",
-          "La contextualisation juridique est essentielle pour la précision",
-          "Les templates permettent une standardisation et un gain de temps"
+          "🔒 Stockage sécurisé et confidentiel de vos connaissances",
+          "📊 Analyse simultanée de centaines de documents",
+          "🎯 Recherche intelligente par concepts, pas seulement par mots"
         ]
       }
     },
     {
       id: 1,
-      title: "Rédaction assistée d'actes",
+      title: "🌵 Organisation intelligente : Jardin structuré",
       duration: "35 min",
       content: {
-        overview: "Utilisez l'IA pour accélérer la rédaction d'actes juridiques tout en maintenant la qualité et la conformité.",
+        overview: "💚 Apprenez à structurer vos documents juridiques pour une recherche et récupération optimales avec l'IA - Organisez votre jardin cactus !",
         objectives: [
-          "Créer des modèles d'actes avec assistance IA",
-          "Personnaliser automatiquement selon les spécificités du dossier",
-          "Vérifier et valider les documents générés"
+          "🏗️ Créer une taxonomie juridique adaptée à votre pratique",
+          "🏷️ Utiliser les métadonnées pour améliorer la recherche",
+          "📁 Organiser vos documents par domaine et spécialité"
         ],
         keyPoints: [
-          "L'IA peut réduire le temps de rédaction de 80%",
-          "La personnalisation automatique évite les erreurs de copier-coller",
-          "La validation humaine reste indispensable pour la conformité"
+          "⚡ Une bonne organisation multiplie l'efficacité par 5",
+          "🎯 Les métadonnées permettent des recherches ultra-précises",
+          "🔗 L'organisation thématique facilite les références croisées"
         ]
       }
     },
     {
       id: 2,
-      title: "Synthèses automatiques",
-      duration: "30 min",
+      title: "🌵 Recherche sémantique : Trésor caché",
+      duration: "40 min",
       content: {
-        overview: "Générez des synthèses précises et structurées de documents juridiques complexes en quelques minutes.",
+        overview: "💚 Maîtrisez la recherche sémantique pour retrouver instantanément les informations pertinentes dans vos documents juridiques - Déterrez les trésors cachés !",
         objectives: [
-          "Paramétrer l'IA pour des synthèses juridiques pertinentes",
-          "Structurer les synthèses selon vos besoins métier",
-          "Intégrer les synthèses dans vos workflows"
+          "🔍 Comprendre le fonctionnement de la recherche sémantique",
+          "💬 Utiliser des requêtes naturelles et contextuelles",
+          "💾 Créer des recherches sauvegardées pour vos besoins récurrents"
         ],
         keyPoints: [
-          "Les synthèses IA font gagner 4-6h par dossier complexe",
-          "La structuration personnalisée améliore l'utilisabilité",
-          "L'intégration workflow optimise la productivité globale"
+          "🎯 La recherche sémantique trouve des concepts même sans mots-clés exacts",
+          "🌟 Les requêtes en langage naturel donnent des résultats plus pertinents",
+          "⚡ Les recherches sauvegardées automatisent vos tâches répétitives"
         ]
       }
     },
     {
       id: 3,
-      title: "Veille jurisprudentielle IA",
-      duration: "40 min",
+      title: "🌵 Duo gagnant : ChatGPT + NotebookLM",
+      duration: "35 min",
       content: {
-        overview: "Automatisez votre veille juridique avec des outils IA pour rester à jour sur l'évolution du droit.",
+        overview: "💚 Apprenez à combiner ChatGPT et NotebookLM pour créer un workflow d'IA complet et ultra-efficace - La dream team cactus !",
         objectives: [
-          "Configurer des alertes automatiques personnalisées",
-          "Analyser et synthétiser les nouvelles décisions",
-          "Créer un système de classification intelligent"
+          "🔗 Connecter vos connaissances NotebookLM à ChatGPT",
+          "✨ Créer des prompts enrichis par vos documents personnels",
+          "🚀 Automatiser les workflows entre les deux outils"
         ],
         keyPoints: [
-          "La veille automatisée couvre 10x plus de sources",
-          "L'analyse IA identifie les tendances jurisprudentielles",
-          "La classification intelligente facilite la recherche ultérieure"
+          "💪 La combinaison des deux outils multiplie leur puissance",
+          "📖 Vos documents personnels enrichissent les réponses de ChatGPT",
+          "🔄 Création de workflows automatisés pour la productivité maximale"
         ]
       }
     }
@@ -94,19 +94,49 @@ export default function Module3() {
   const quiz = {
     questions: [
       {
-        question: "De combien un prompt bien structuré améliore-t-il la qualité des réponses ?",
-        options: ["50%", "60%", "70%", "80%"],
+        question: "🌵 Quelle est la principale différence entre NotebookLM et ChatGPT ?",
+        options: [
+          "💨 NotebookLM est plus rapide que ChatGPT",
+          "📚 NotebookLM analyse vos documents personnels, ChatGPT est généraliste",
+          "💰 ChatGPT coûte plus cher que NotebookLM",
+          "🤝 Ils font exactement la même chose"
+        ],
+        correct: 1
+      },
+      {
+        question: "🌵 Quel type de recherche NotebookLM permet-il ?",
+        options: [
+          "🔍 Uniquement par mots-clés exacts",
+          "🧠 Par concepts et idées, même sans mots-clés précis",
+          "📄 Seulement dans des documents PDF",
+          "📅 Uniquement dans des documents créés après 2020"
+        ],
+        correct: 1
+      },
+      {
+        question: "🌵 Quel avantage apporte la combinaison ChatGPT + NotebookLM ?",
+        options: [
+          "💸 Réduction des coûts d'abonnement",
+          "✨ Réponses enrichies par vos connaissances personnelles",
+          "🎨 Interface plus jolie",
+          "📴 Possibilité de travailler hors ligne"
+        ],
+        correct: 1
+      },
+      {
+        question: "🌵 Combien de documents NotebookLM peut-il analyser simultanément ?",
+        options: ["5 🌵", "20 🌵", "50 🌵", "1000 🌵"],
         correct: 2
       },
       {
-        question: "Quel gain de temps l'IA peut-elle apporter à la rédaction d'actes ?",
-        options: ["60%", "70%", "80%", "90%"],
-        correct: 2
-      },
-      {
-        question: "Combien d'heures les synthèses IA font-elles gagner par dossier complexe ?",
-        options: ["2-3h", "3-4h", "4-6h", "6-8h"],
-        correct: 2
+        question: "🌵 Quelle fonctionnalité permet de gagner le plus de temps avec NotebookLM ?",
+        options: [
+          "🎨 L'interface colorée",
+          "💾 Les recherches sauvegardées pour les tâches répétitives",
+          "🔔 Les notifications push",
+          "🌙 Le mode sombre"
+        ],
+        correct: 1
       }
     ]
   }
@@ -134,14 +164,18 @@ export default function Module3() {
                 Retour
               </Button>
               <div>
-                <h1 className="text-2xl font-bold text-white">Module 3 : Productivité IA pour avocats</h1>
-                <p className="text-muted-foreground">Synthèses, rédaction d'actes et veille juridique</p>
+                <h1 className="text-2xl font-bold text-white">
+                  🌵 Module 3 : <span className="text-primary">NotebookLM</span> - Base de connaissances IA
+                </h1>
+                <p className="text-muted-foreground">
+                  💚 Organisez vos connaissances juridiques et boostez ChatGPT avec vos documents personnels - Le cactus intelligent !
+                </p>
               </div>
             </div>
             <div className="flex items-center space-x-4">
               <Badge variant="outline">
                 <Brain className="h-4 w-4 mr-1" />
-                Module 3
+                🌵 Module 3
               </Badge>
               <div className="text-right">
                 <div className="text-sm font-medium">Progression</div>
@@ -161,7 +195,7 @@ export default function Module3() {
           <div className="lg:col-span-1">
             <Card>
               <CardHeader>
-                <CardTitle className="text-lg">Leçons du module</CardTitle>
+                <CardTitle className="text-lg">🌵 🌱 Leçons du jardin cactus</CardTitle>
               </CardHeader>
               <CardContent className="space-y-2">
                 {lessons.map((lesson, index) => (
@@ -200,7 +234,7 @@ export default function Module3() {
                 >
                   <div className="flex items-center space-x-2">
                     <Award className="h-4 w-4 text-primary" />
-                    <span className="text-sm font-medium">Quiz final</span>
+                    <span className="text-sm font-medium">🌵 Quiz cactus final</span>
                   </div>
                   <div className="mt-1 text-xs text-muted-foreground">15 questions</div>
                   {quizScore && (
@@ -258,12 +292,12 @@ function LessonContent({ lesson, onComplete, isCompleted }: any) {
       </CardHeader>
       <CardContent className="space-y-6">
         <div>
-          <h3 className="text-lg font-semibold mb-3">Vue d'ensemble</h3>
+          <h3 className="text-lg font-semibold mb-3">🌵 👀 Vue d'ensemble cactus</h3>
           <p className="text-muted-foreground leading-relaxed">{lesson.content.overview}</p>
         </div>
 
         <div>
-          <h3 className="text-lg font-semibold mb-3">Objectifs d'apprentissage</h3>
+          <h3 className="text-lg font-semibold mb-3">🌵 🎯 Objectifs d'arrosage</h3>
           <ul className="space-y-2">
             {lesson.content.objectives.map((objective: string, index: number) => (
               <li key={index} className="flex items-start">
@@ -275,7 +309,7 @@ function LessonContent({ lesson, onComplete, isCompleted }: any) {
         </div>
 
         <div>
-          <h3 className="text-lg font-semibold mb-3">Points clés à retenir</h3>
+          <h3 className="text-lg font-semibold mb-3">🌵 ⭐ Épines essentielles à retenir</h3>
           <div className="grid gap-4">
             {lesson.content.keyPoints.map((point: string, index: number) => (
               <Card key={index} className="bg-primary/5 border-primary/20">
@@ -348,34 +382,34 @@ function QuizContent({ quiz, onComplete, currentScore }: any) {
     return (
       <Card>
         <CardHeader>
-          <CardTitle className="text-xl text-primary">Résultats du Quiz</CardTitle>
+          <CardTitle className="text-xl text-primary">🌵 🏆 Résultats du Quiz Cactus</CardTitle>
         </CardHeader>
         <CardContent className="text-center space-y-6">
           <div>
             <div className="text-4xl font-bold text-primary mb-2">{score}%</div>
             <p className="text-muted-foreground">
-              {score >= 80 ? 'Félicitations ! Vous avez réussi le quiz.' : 'Vous pouvez reprendre le quiz pour améliorer votre score.'}
+              {score >= 80 ? '🎉 🌵 Félicitations ! Vous êtes un vrai cactus expert !' : '🌱 💪 Continuez à arroser vos connaissances pour améliorer votre score !'}
             </p>
           </div>
           
           <div className="flex justify-center space-x-4">
             <Button variant="outline" onClick={resetQuiz}>
-              Reprendre le quiz
+              🌵 🔄 Reprendre le quiz cactus
             </Button>
             <Button onClick={() => window.location.href = '/'}>
-              Retour à l'accueil
+              🏠 Retour à l'accueil
+            </Button>
+          </div>
 
           <div className="flex gap-4 mt-4">
             <Button variant="outline" onClick={() => router.push('/modules/module1')}>
-              ← Module 1
+              ← 🌵 Module 1
             </Button>
             <Button variant="outline" onClick={() => router.push('/modules/module2')}>
-              ← Module 2
+              ← 🌵 Module 2
             </Button>
             <Button variant="outline" onClick={() => router.push('/modules/module4')}>
-              Module 4 →
-            </Button>
-          </div>
+              🌵 Module 4 →
             </Button>
           </div>
         </CardContent>
@@ -387,9 +421,9 @@ function QuizContent({ quiz, onComplete, currentScore }: any) {
     <Card>
       <CardHeader>
         <div className="flex items-center justify-between">
-          <CardTitle className="text-xl text-primary">Quiz - Module 3</CardTitle>
+          <CardTitle className="text-xl text-primary">🌵 🧠 Quiz Cactus - Module 3</CardTitle>
           <Badge variant="outline">
-            Question {currentQuestion + 1} / {quiz.questions.length}
+            🌵 Question {currentQuestion + 1} / {quiz.questions.length}
           </Badge>
         </div>
         <Progress value={((currentQuestion + 1) / quiz.questions.length) * 100} className="mt-4" />
@@ -422,11 +456,11 @@ function QuizContent({ quiz, onComplete, currentScore }: any) {
         </div>
 
         <div className="flex justify-end">
-          <Button 
+          <Button
             onClick={handleNext}
             disabled={answers[currentQuestion] === undefined}
           >
-            {currentQuestion === quiz.questions.length - 1 ? 'Terminer le quiz' : 'Question suivante'}
+            {currentQuestion === quiz.questions.length - 1 ? '🌵 🎯 Terminer le quiz cactus' : '🌵 ➡️ Question suivante'}
           </Button>
         </div>
       </CardContent>

@@ -89,10 +89,5 @@ Le thème peut être facilement personnalisé via :
 
 Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
 
-## 👨‍💻 Auteur
+## 👨‍💻 Auteur Frédéric Denel Lindy Cactus Mentor
 
-Développé avec ❤️ pour la formation des avocats à l'IA moderne.
-
----
-
-⭐ **N'hésitez pas à mettre une étoile si ce projet vous plaît !**

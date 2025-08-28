@@ -7,7 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Progress } from '@/components/ui/progress'
 import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
-import { CheckCircle, ArrowLeft, Play, Shield, Clock, Award, FileText, Lock, Database } from 'lucide-react'
+import { CheckCircle, ArrowLeft, Play, Brain, Clock, Award, FileText, Lock, Database } from 'lucide-react'
 
 export default function Module2() {
   const router = useRouter()
@@ -19,73 +19,145 @@ export default function Module2() {
   const lessons = [
     {
       id: 0,
-      title: "Introduction à NotebookLM pour avocats",
-      duration: "20 min",
+      title: "ChatGPT : Votre assistant juridique personnel",
+      duration: "25 min",
       content: {
-        overview: "Découvrez NotebookLM, l'outil IA de Google conçu pour organiser et analyser vos documents juridiques de manière sécurisée.",
+        overview: "Découvrez comment ChatGPT peut devenir votre premier assistant pour gagner du temps dans votre pratique quotidienne d'avocat.",
         objectives: [
-          "Comprendre les avantages de NotebookLM pour la pratique juridique",
-          "Maîtriser l'interface et les fonctionnalités principales",
-          "Configurer votre premier notebook juridique"
+          "Comprendre le potentiel de ChatGPT pour les avocats",
+          "Savoir quand et comment utiliser ChatGPT efficacement",
+          "Établir les bonnes pratiques de sécurité et confidentialité"
         ],
         keyPoints: [
-          "NotebookLM peut analyser jusqu'à 50 documents simultanément",
-          "L'outil respecte la confidentialité : vos données ne sont pas utilisées pour l'entraînement",
-          "Génération automatique de synthèses et de questions pertinentes"
+          "ChatGPT peut traiter 80% de vos tâches répétitives",
+          "Gagnez 3-4 heures par jour avec les bons prompts",
+          "L'IA respecte le secret professionnel si utilisée correctement"
         ]
       }
     },
     {
       id: 1,
-      title: "Structuration des dossiers clients",
+      title: "L'art du prompt : Parler à l'IA comme un avocat",
       duration: "30 min",
       content: {
-        overview: "Apprenez à organiser efficacement vos dossiers clients dans NotebookLM pour une recherche et une analyse optimales.",
+        overview: "Apprenez à rédiger des prompts précis qui donnent des résultats juridiques de qualité professionnelle.",
         objectives: [
-          "Créer une architecture de dossiers cohérente",
-          "Utiliser les tags et métadonnées efficacement",
-          "Établir des conventions de nommage standardisées"
+          "Maîtriser la structure d'un prompt juridique efficace",
+          "Utiliser le langage technique approprié selon le domaine du droit",
+          "Créer des templates de prompts réutilisables pour votre cabinet"
         ],
         keyPoints: [
-          "Une structure claire améliore la recherche de 85%",
-          "Les métadonnées permettent un tri automatique intelligent",
-          "La standardisation facilite la collaboration en équipe"
+          "Un prompt bien écrit donne des réponses 5x plus précises",
+          "La précision juridique réduit les risques d'erreurs",
+          "Les templates vous font gagner 15 minutes par tâche"
         ]
       }
     },
     {
       id: 2,
-      title: "Confidentialité et RGPD",
-      duration: "25 min",
+      title: "Gestion documentaire : Organiser et analyser vos dossiers",
+      duration: "35 min",
       content: {
-        overview: "Maîtrisez les aspects de confidentialité et de conformité RGPD lors de l'utilisation d'outils IA dans votre pratique juridique.",
+        overview: "Utilisez ChatGPT pour organiser, analyser et synthétiser vos documents juridiques en quelques minutes.",
         objectives: [
-          "Comprendre les enjeux de confidentialité avec l'IA",
-          "Appliquer les principes RGPD aux outils IA",
-          "Mettre en place des procédures de sécurité"
+          "Analyser automatiquement des contrats complexes",
+          "Créer des synthèses exécutives de dossiers volumineux",
+          "Identifier les points clés et risques dans vos documents"
         ],
         keyPoints: [
-          "NotebookLM ne stocke pas vos données au-delà de la session",
-          "Anonymisation des données sensibles avant traitement",
-          "Audit trail complet pour la conformité"
+          "Analysez un contrat de 50 pages en 5 minutes",
+          "Identifiez automatiquement les clauses à risque",
+          "Créez des résumés clients en langage accessible"
         ]
       }
     },
     {
       id: 3,
-      title: "Recherche intelligente dans les documents",
-      duration: "35 min",
+      title: "Rédaction assistée : Actes et courriers en un clic",
+      duration: "40 min",
       content: {
-        overview: "Exploitez la puissance de la recherche sémantique pour retrouver instantanément les informations pertinentes dans vos documents.",
+        overview: "Générez des actes juridiques, courriers et documents professionnels de qualité en quelques minutes.",
         objectives: [
-          "Maîtriser la recherche par concepts et non par mots-clés",
-          "Utiliser les filtres avancés et les requêtes complexes",
-          "Créer des recherches sauvegardées pour les cas récurrents"
+          "Créer des modèles d'actes personnalisables",
+          "Rédiger des courriers professionnels adaptés à chaque situation",
+          "Adapter automatiquement les documents selon vos besoins"
         ],
         keyPoints: [
-          "La recherche sémantique trouve des concepts même sans mots-clés exacts",
-          "Les filtres temporels et par type de document affinent les résultats",
-          "Les recherches sauvegardées automatisent les tâches répétitives"
+          "Divisez par 4 le temps de rédaction d'un acte simple",
+          "Toujours la même qualité professionnelle",
+          "Personnalisation automatique selon le dossier"
+        ]
+      }
+    },
+    {
+      id: 4,
+      title: "Relecture intelligente : Corrections et améliorations",
+      duration: "30 min",
+      content: {
+        overview: "Utilisez ChatGPT pour relire vos documents, corriger les erreurs et améliorer le style juridique.",
+        objectives: [
+          "Détecter les erreurs juridiques et stylistiques",
+          "Améliorer la clarté et la précision de vos écrits",
+          "Vérifier la conformité avec les dernières jurisprudences"
+        ],
+        keyPoints: [
+          "Détection automatique des erreurs potentielles",
+          "Suggestions d'amélioration stylistiques",
+          "Vérification de conformité réglementaire"
+        ]
+      }
+    },
+    {
+      id: 5,
+      title: "Automatisation avancée : Workflows personnalisés",
+      duration: "35 min",
+      content: {
+        overview: "Créez des workflows automatisés pour les tâches répétitives de votre cabinet.",
+        objectives: [
+          "Automatiser la réponse aux demandes courantes",
+          "Créer des checklists personnalisées pour chaque type de dossier",
+          "Mettre en place des rappels intelligents pour les échéances"
+        ],
+        keyPoints: [
+          "Réponses automatiques aux emails standards",
+          "Checklists qui s'adaptent au type de dossier",
+          "Rappels automatiques pour éviter les oublis"
+        ]
+      }
+    },
+    {
+      id: 6,
+      title: "NotebookLM : L'IA qui organise vos connaissances",
+      duration: "30 min",
+      content: {
+        overview: "Découvrez NotebookLM, l'outil complémentaire à ChatGPT pour organiser et interroger vos documents juridiques.",
+        objectives: [
+          "Comprendre comment NotebookLM complète ChatGPT",
+          "Organiser vos sources juridiques de référence",
+          "Créer des notebooks thématiques pour vos spécialités"
+        ],
+        keyPoints: [
+          "Stockage sécurisé de vos connaissances juridiques",
+          "Recherche instantanée dans vos documents personnels",
+          "Synthèses automatiques de jurisprudence"
+        ]
+      }
+    },
+    {
+      id: 7,
+      title: "Sécurité et confidentialité : Protéger vos données",
+      duration: "25 min",
+      content: {
+        overview: "Maîtrisez les aspects de sécurité et confidentialité essentiels pour un avocat utilisant l'IA.",
+        objectives: [
+          "Comprendre les risques et les protections nécessaires",
+          "Appliquer les règles déontologiques avec l'IA",
+          "Mettre en place des procédures de sécurité au quotidien"
+        ],
+        keyPoints: [
+          "Le secret professionnel prime sur toute automatisation",
+          "Anonymisation des données sensibles obligatoire",
+          "Audit régulier de vos pratiques IA"
         ]
       }
     }
@@ -94,24 +166,44 @@ export default function Module2() {
   const quiz = {
     questions: [
       {
-        question: "Combien de documents NotebookLM peut-il analyser simultanément ?",
-        options: ["20 documents", "30 documents", "50 documents", "100 documents"],
+        question: "Quel pourcentage approximatif de tâches répétitives ChatGPT peut-il traiter pour un avocat ?",
+        options: ["40%", "60%", "80%", "100%"],
         correct: 2
       },
       {
-        question: "Quelle est la principale garantie de confidentialité de NotebookLM ?",
+        question: "Quelle est la principale qualité d'un bon prompt juridique ?",
         options: [
-          "Chiffrement des données",
-          "Vos données ne sont pas utilisées pour l'entraînement",
-          "Stockage local uniquement",
-          "Accès limité aux administrateurs"
+          "Être le plus court possible",
+          "Utiliser un langage technique précis",
+          "Être écrit en majuscules",
+          "Contenir le plus de mots possible"
         ],
         correct: 1
       },
       {
-        question: "De combien la recherche s'améliore-t-elle avec une structure claire ?",
-        options: ["65%", "75%", "85%", "95%"],
-        correct: 2
+        question: "Quel outil est le plus adapté pour analyser un contrat de 50 pages rapidement ?",
+        options: [
+          "La lecture manuelle complète",
+          "ChatGPT avec un prompt d'analyse",
+          "Un simple résumé manuel",
+          "La photocopie du document"
+        ],
+        correct: 1
+      },
+      {
+        question: "Combien de temps peut-on gagner sur la rédaction d'un acte simple avec ChatGPT ?",
+        options: ["10% de temps", "25% de temps", "50% de temps", "75% de temps"],
+        correct: 3
+      },
+      {
+        question: "Quelle est la règle d'or concernant le secret professionnel avec l'IA ?",
+        options: [
+          "Le secret professionnel ne s'applique pas à l'IA",
+          "Le secret professionnel prime sur toute automatisation",
+          "L'IA peut tout traiter automatiquement",
+          "Il faut demander l'autorisation du client"
+        ],
+        correct: 1
       }
     ]
   }
@@ -139,13 +231,13 @@ export default function Module2() {
                 Retour
               </Button>
               <div>
-                <h1 className="text-2xl font-bold text-white">Module 2 : Gestion documentaire & confidentialité</h1>
-                <p className="text-muted-foreground">NotebookLM et structuration sécurisée des dossiers</p>
+                <h1 className="text-2xl font-bold text-white">Module 2 : ChatGPT Pro pour avocats</h1>
+                <p className="text-muted-foreground">Maîtrisez l'IA pour gagner du temps : gestion documentaire, rédaction, relecture</p>
               </div>
             </div>
             <div className="flex items-center space-x-4">
               <Badge variant="outline">
-                <Shield className="h-4 w-4 mr-1" />
+                <Brain className="h-4 w-4 mr-1" />
                 Module 2
               </Badge>
               <div className="text-right">

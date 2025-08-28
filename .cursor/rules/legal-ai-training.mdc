@@ -1,0 +1,165 @@
+---
+description: Règles spécialisées pour le développement de la plateforme de formation IA avocats - Focus droit des affaires et contentieux civil/commercial
+globs: ["**/*.tsx", "**/*.ts", "**/*.jsx", "**/*.js"]
+alwaysApply: true
+---
+
+# 🎯 Règles Spécialisées - Formation IA Avocats
+
+## ⚖️ Contexte Juridique et Pédagogique
+
+### Domaine d'Expertise
+- **Droit des affaires** : contrats commerciaux, sociétés, gouvernance, compliance
+- **Contentieux civil** : procédures judiciaires, preuves, plaidoiries, voies de recours
+- **Contentieux commercial** : litiges B2B, recouvrement, médiation, arbitrage
+- **Formation IA** : intégration de l'intelligence artificielle dans la pratique juridique
+
+### Objectifs Pédagogiques
+- Formation progressive : concepts de base → application pratique
+- Cas concrets du monde réel
+- Templates spécialisés par domaine juridique
+- Évaluation continue avec quiz et exercices pratiques
+
+## 🏗️ Architecture et Structure
+
+### Organisation des Modules
+- **Module 1** : Automatisation et organisation
+- **Module 2** : IA et gestion documentaire
+- **Module 3** : Productivité et outils spécialisés
+- **Module 4** : Formation premium complète
+
+### Structure des Composants
+```typescript
+// Structure recommandée pour les composants pédagogiques
+interface LessonContent {
+  id: number;
+  title: string;
+  duration: string;
+  objectives: string[];
+  keyPoints: string[];
+  practicalExamples: LegalCase[];
+}
+
+interface LegalCase {
+  context: string;
+  scenario: string;
+  legalDomain: 'droit-affaires' | 'contentieux-civil' | 'contentieux-commercial';
+  complexity: 'debutant' | 'intermediaire' | 'avance';
+}
+```
+
+## 📝 Standards de Contenu
+
+### Terminologie Juridique
+- Utiliser le vocabulaire technique approprié selon le domaine
+- Maintenir la précision juridique dans les explications
+- Respecter la hiérarchie des normes juridiques (loi > décret > arrêté)
+- Adapter le niveau de langage selon le public cible
+
+### Structure Pédagogique
+- **Introduction** : contexte et enjeux
+- **Objectifs pédagogiques** : apprentissages visés
+- **Contenu théorique** : concepts juridiques fondamentaux
+- **Exemples pratiques** : cas concrets du domaine
+- **Exercices** : mise en pratique avec l'IA
+- **Évaluation** : quiz et validation des acquis
+
+## 🔧 Bonnes Pratiques Techniques
+
+### Gestion d'État Pédagogique
+- Suivi automatique de la progression utilisateur
+- Sauvegarde persistante des réponses aux quiz
+- Historique des sessions de formation
+- Statistiques d'engagement et de réussite
+
+### Composants Réutilisables
+```typescript
+// Composants canoniques pour l'interface pédagogique
+- LessonCard : affichage des leçons
+- QuizComponent : gestion des questionnaires
+- ProgressTracker : suivi de progression
+- ContentViewer : affichage du contenu pédagogique
+- NavigationModule : navigation entre modules
+```
+
+### Performance et Accessibilité
+- Temps de chargement < 3 secondes pour les leçons
+- Navigation clavier complète
+- Support des lecteurs d'écran
+- Design responsive mobile-first
+
+## 📋 Templates et Patterns
+
+### Structure de Module
+```typescript
+const moduleTemplate = {
+  id: number,
+  title: string,
+  description: string,
+  duration: string,
+  targetAudience: string[],
+  prerequisites: string[],
+  lessons: LessonContent[],
+  finalQuiz: QuizData,
+  resources: Resource[]
+}
+```
+
+### Types TypeScript Obligatoires
+```typescript
+type LegalDomain = 'droit-affaires' | 'contentieux-civil' | 'contentieux-commercial'
+type DifficultyLevel = 'debutant' | 'intermediaire' | 'avance' | 'expert'
+type ContentType = 'theorie' | 'pratique' | 'cas-pratique' | 'evaluation'
+```
+
+## 🚫 Interdictions et Restrictions
+
+### Sécurité et Conformité
+- **ABSOLUMENT INTERDIT** : utilisation de données réelles de clients
+- **OBLIGATOIRE** : anonymisation de tous les exemples juridiques
+- **REQUIS** : respect du secret professionnel dans les contenus
+- **MANDATOIRE** : conformité RGPD pour les données utilisateurs
+
+### Qualité du Code
+- **INTERDIT** : hardcoding de contenu juridique
+- **OBLIGATOIRE** : utilisation de fichiers de configuration
+- **REQUIS** : validation TypeScript stricte
+- **MANDATOIRE** : tests unitaires pour la logique pédagogique
+
+### Contenu Pédagogique
+- **INTERDIT** : conseils juridiques personnalisés
+- **OBLIGATOIRE** : mention "contenu pédagogique uniquement"
+- **REQUIS** : sources légales vérifiées et à jour
+- **MANDATOIRE** : équilibre théorie/pratique
+
+## 🎯 Métriques de Qualité
+
+### Performance Technique
+- Bundle size < 500KB pour les pages pédagogiques
+- First Contentful Paint < 2 secondes
+- Lighthouse score > 90 pour toutes les pages
+
+### Qualité Pédagogique
+- Taux d'achèvement des modules > 80%
+- Score moyen aux quiz > 75%
+- Feedback utilisateurs positif > 4/5
+- Temps moyen par leçon adapté au contenu
+
+## 🔄 Workflow de Développement
+
+### Processus de Validation
+1. **Revue de contenu** : validation par expert juridique
+2. **Tests pédagogiques** : vérification de l'apprentissage
+3. **Tests techniques** : performance et accessibilité
+4. **Revue de code** : respect des bonnes pratiques
+5. **Déploiement progressif** : validation en environnement de test
+
+### Maintenance Continue
+- Mise à jour trimestrielle des références juridiques
+- Actualisation des exemples pratiques
+- Intégration des retours utilisateurs
+- Optimisation continue des performances
+
+---
+
+**Note** : Ces règles s'appliquent en complément des règles générales de qualité de code. En cas de conflit, les règles spécialisées priment pour les aspects pédagogiques et juridiques.

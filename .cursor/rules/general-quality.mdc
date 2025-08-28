@@ -1,0 +1,62 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+---
+description: Enforce clean code practices for the  project: prevent useless components, hardcoded values, and duplication. Promote automation and configuration-first logic.
+globs: ["**/*.tsx", "**/*.ts", "**/*.jsx", "**/*.js"]
+alwaysApply: true
+---
+
+# Code Quality Standards for 
+
+## Component Guidelines
+- Avoid creating components without clear purpose
+- Extract reusable logic into custom hooks
+- Keep components focused and single-responsibility
+- Use TypeScript types/interfaces for props
+
+## Value Management
+- No hardcoded strings or numbers in components
+- Store configuration in dedicated config files
+- Use environment variables for sensitive/variable data
+- Define constants for repeated values
+
+## Code Duplication
+- DRY (Don't Repeat Yourself) principle
+- Create shared utilities for common operations
+- Use composition for shared component logic
+- Implement proper inheritance hierarchies
+
+## Automation & Configuration
+- Prefer configuration over code when possible
+- Implement automated testing for critical paths
+- Use TypeScript for type safety
+- Follow established naming conventions
+
+## Detailed Implementation Guidelines
+
+- Do not create unnecessary components. If a component is used only once or doesn't add clarity, inline implementation is preferred.
+- Avoid any code duplication. If logic appears multiple times, extract it into a reusable function or component.
+- Favor automatic configuration (via JSON files, YAML, or `.env`) rather than hardcoding values.
+- Any functional or behavioral addition must include a configuration file in `config/` or `settings/`.
+- All content (lists, options, tables) must come from a **data structure (array or object)**.
+- Always request explicit validation (via TODO comment or user prompt) before setting static content in the interface.
+
+---
+
+# Règle du Composant Canonique : Unicité et Réutilisation de l'UI
+
+## Objectif
+Garantir une expérience utilisateur (UX) et une interface (UI) cohérentes à travers toute l'application, tout en accélérant le développement et en simplifiant la maintenance. Pour chaque tâche d'interface récurrente (afficher un détail, une liste, un formulaire), un seul et unique composant "canonique" (officiel) doit être utilisé.
+
+
+## Règle Stricte
+
+1.  **Désignation d'un Composant Canonique** : Pour toute fonctionnalité d'interface destinée à être réutilisée, un composant doit être désigné comme étant le **composant canonique**. Ce composant devient la seule et unique manière de réaliser cette tâche d'affichage.
+2.  **Interdiction de Créer des Doublons** : Il est formellement **interdit** de créer un nouveau composant qui remplit une fonction déjà assurée par un composant canonique existant.
+3.  **Réutiliser avant de Créer** : Avant de développer un nouveau composant, le développeur a l'**obligation** de parcourir l'arborescence (`src/components/`) pour s'assurer qu'un composant adéquat n'existe pas déjà.
+4.  **Faire Évoluer, ne pas Cloner** : Si un composant canonique existant ne répond que partiellement à un nouveau besoin, il doit être **modifié et amélioré** pour couvrir le nouveau cas d'usage (par exemple, en ajoutant de nouvelles props). Il ne doit pas être cloné et modifié.
+
+

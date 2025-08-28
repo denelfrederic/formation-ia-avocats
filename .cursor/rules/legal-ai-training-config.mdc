@@ -1,0 +1,248 @@
+---
+description: Configuration et templates pour l'implémentation des règles spécialisées formation IA avocats
+globs: ["**/*.tsx", "**/*.ts", "**/*.jsx", "**/*.js"]
+alwaysApply: false
+---
+
+# 📋 Configuration Pédagogique - Formation IA Avocats
+
+## 🗂️ Structure des Données
+
+### Templates de Module Obligatoires
+Créer le fichier `config/modules.ts` avec cette structure :
+
+```typescript
+export interface LegalModule {
+  id: number;
+  title: string;
+  description: string;
+  duration: string;
+  targetAudience: string[];
+  legalDomains: LegalDomain[];
+  difficulty: DifficultyLevel;
+  prerequisites: string[];
+  lessons: Lesson[];
+  finalQuiz: QuizData;
+  resources: Resource[];
+  estimatedSavings: string; // ex: "3-5h par jour"
+}
+
+export interface Lesson {
+  id: number;
+  title: string;
+  duration: string;
+  contentType: ContentType;
+  objectives: string[];
+  keyPoints: string[];
+  practicalExamples: LegalCase[];
+  exercises: Exercise[];
+  resources: string[];
+}
+
+export interface LegalCase {
+  id: string;
+  title: string;
+  context: string;
+  scenario: string;
+  legalDomain: LegalDomain;
+  complexity: DifficultyLevel;
+  stakeholders: string[];
+  legalIssues: string[];
+  aiApplications: string[];
+  learningOutcomes: string[];
+}
+```
+
+## ⚖️ Domaines Juridiques Couverts
+
+### Droit des Affaires
+```typescript
+const businessLawDomains = [
+  'contrats-commerciaux',
+  'gouvernance-societes',
+  'fusions-acquisitions',
+  'compliance-reglementaire',
+  'propriete-intellectuelle',
+  'droit-concurrence',
+  'financement-societes'
+] as const;
+```
+
+### Contentieux Civil
+```typescript
+const civilLitigationDomains = [
+  'procedures-judiciaires',
+  'preuve-civile',
+  'voies-recours',
+  'mesures-provisoires',
+  'execution-judgments',
+  'prescription-civile',
+  'responsabilite-civile'
+] as const;
+```
+
+### Contentieux Commercial
+```typescript
+const commercialLitigationDomains = [
+  'litiges-b2b',
+  'recouvrement-creances',
+  'arbitrage-commercial',
+  'mediation-commerciale',
+  'contrats-internationaux',
+  'garanties-bancaires',
+  'cession-fonds-commerce'
+] as const;
+```
+
+## 🎯 Templates de Prompt IA
+
+### Structure Standard de Prompt Juridique
+```typescript
+export const legalPromptTemplate = {
+  context: string, // "Vous êtes avocat spécialisé en [domaine]"
+  task: string, // Action demandée
+  legalDomain: LegalDomain,
+  complexity: DifficultyLevel,
+  outputFormat: string, // Format attendu
+  constraints: string[], // Contraintes légales/éthiques
+  examples: LegalCase[]
+};
+```
+
+### Prompts Spécialisés
+```typescript
+// Analyse de contrat
+export const contractAnalysisPrompt = {
+  context: "Vous êtes avocat spécialisé en droit des contrats",
+  task: "Analysez ce contrat et identifiez les clauses importantes",
+  outputFormat: "Rapport structuré avec recommandations",
+  constraints: [
+    "Respecter la confidentialité",
+    "Ne pas donner de conseils personnalisés",
+    "Mentionner la nécessité de consultation professionnelle"
+  ]
+};
+
+// Préparation de plaidoirie
+export const pleadingPrompt = {
+  context: "Vous êtes avocat plaidant spécialisé en contentieux civil",
+  task: "Préparer une stratégie de plaidoirie pour ce dossier",
+  outputFormat: "Plan argumentaire structuré",
+  constraints: [
+    "Respecter les règles de procédure civile",
+    "Adapter au tribunal compétent",
+    "Prévoir les arguments de la partie adverse"
+  ]
+};
+```
+
+## 📊 Métriques et KPIs
+
+### Indicateurs de Performance Pédagogique
+```typescript
+export const pedagogicalMetrics = {
+  completionRate: number, // % d'achèvement des modules
+  averageQuizScore: number, // Score moyen aux quiz
+  sessionDuration: number, // Durée moyenne des sessions
+  userSatisfaction: number, // Note de satisfaction /5
+  skillImprovement: number, // Amélioration des compétences auto-évaluée
+  timeSaved: number // Temps gagné estimé par les utilisateurs
+};
+```
+
+### Indicateurs Techniques
+```typescript
+export const technicalMetrics = {
+  pageLoadTime: number, // Temps de chargement moyen
+  errorRate: number, // Taux d'erreur des pages
+  accessibilityScore: number, // Score d'accessibilité
+  mobileCompatibility: number, // % d'utilisateurs mobile
+  featureUsage: object // Utilisation des fonctionnalités
+};
+```
+
+## 🔧 Composants Obligatoires
+
+### Composants Pédagogiques de Base
+```typescript
+// Composant de leçon standard
+export const LessonComponent = ({
+  lesson,
+  onComplete,
+  progress
+}: LessonProps) => {
+  // Implémentation selon les règles canoniques
+};
+
+// Composant de quiz
+export const QuizComponent = ({
+  questions,
+  onSubmit,
+  timeLimit
+}: QuizProps) => {
+  // Implémentation avec validation temps réel
+};
+```
+
+### Hooks Personnalisés Requis
+```typescript
+// Hook de progression pédagogique
+export const useLessonProgress = (lessonId: string) => {
+  // Logique de suivi de progression
+};
+
+// Hook de quiz
+export const useQuizLogic = (quizData: QuizData) => {
+  // Logique de gestion des quiz
+};
+```
+
+## 📁 Structure de Fichiers Obligatoire
+
+```
+src/
+├── components/
+│   ├── pedagogical/          # Composants pédagogiques
+│   │   ├── LessonCard.tsx
+│   │   ├── QuizComponent.tsx
+│   │   └── ProgressTracker.tsx
+│   └── ui/                   # Composants UI réutilisables
+├── config/
+│   ├── modules.ts           # Configuration des modules
+│   ├── legal-domains.ts     # Définition des domaines juridiques
+│   └── prompts.ts           # Templates de prompts IA
+├── hooks/
+│   ├── useLessonProgress.ts
+│   ├── useQuizLogic.ts
+│   └── useLegalAI.ts
+├── lib/
+│   ├── legal-utils.ts       # Utilitaires juridiques
+│   └── ai-integration.ts    # Intégration IA
+└── types/
+    ├── pedagogical.types.ts
+    ├── legal.types.ts
+    └── ai.types.ts
+```
+
+## 🚫 Checklist de Validation
+
+### Avant Commit
+- [ ] Contenu juridique validé par expert
+- [ ] Respect du secret professionnel
+- [ ] Anonymisation des exemples
+- [ ] Tests pédagogiques passés
+- [ ] Performance Lighthouse > 90
+- [ ] Accessibilité WCAG AA
+- [ ] Mobile responsive testé
+
+### Revue de Code Obligatoire
+- [ ] Respect des règles canoniques
+- [ ] Pas de duplication de code
+- [ ] Types TypeScript stricts
+- [ ] Configuration externalisée
+- [ ] Tests unitaires présents
+- [ ] Documentation à jour
+
+---
+
+**Application** : Ces règles de configuration doivent être appliquées systématiquement lors du développement de nouvelles fonctionnalités pédagogiques.

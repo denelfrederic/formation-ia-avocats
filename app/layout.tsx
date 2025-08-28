@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/header";
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
-  title: "IA & Organisation pour Avocats - Formation CNR",
-  description: "Optimisez votre temps et vos méthodes de travail grâce à l'intelligence artificielle. Formation spécialisée pour cabinets d'avocats.",
-  keywords: "IA, avocats, formation, automatisation, NotebookLM, productivité juridique",
+  title: "🌵 Cactus Mentor - IA & Organisation pour Avocats",
+  description: "Optimisez votre temps et vos méthodes de travail grâce à l'intelligence artificielle. Formation spécialisée pour cabinets d'avocats avec Cactus Mentor.",
+  keywords: "IA, avocats, formation, automatisation, NotebookLM, productivité juridique, cactus mentor",
 };
 
 export default function RootLayout({
@@ -25,7 +26,10 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body className={`${inter.variable} font-sans antialiased`}>
-        {children}
+        <Header />
+        <main>
+          {children}
+        </main>
       </body>
     </html>
   );

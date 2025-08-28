@@ -17,100 +17,55 @@ export default function Module4() {
   const phases = [
     {
       id: 1,
-      title: "Fondamentaux IA",
-      weeks: "S1-4",
-      description: "Prompts, limites, confidentialité pour avocats",
+      title: "Mise en pratique ChatGPT",
+      weeks: "Semaines 1-2",
+      description: "Appliquez ChatGPT à vos dossiers réels",
       color: "bg-blue-500/20 border-blue-500/30",
       lessons: [
-        "S1: Introduction à l'IA pour avocats - Enjeux et opportunités",
-        "S2: Comprendre les limites et risques de l'IA juridique",
-        "S3: Confidentialité et secret professionnel avec l'IA",
-        "S4: Premiers prompts juridiques et bonnes pratiques"
+        "Semaine 1: Création de vos premiers prompts juridiques personnalisés",
+        "Semaine 2: Analyse de vos premiers contrats avec ChatGPT"
       ]
     },
     {
       id: 2,
-      title: "Automatisations simples",
-      weeks: "S5-8",
-      description: "Outlook, mails, RDV",
+      title: "Mise en pratique NotebookLM",
+      weeks: "Semaines 3-4",
+      description: "Construisez votre base de connaissances",
       color: "bg-green-500/20 border-green-500/30",
       lessons: [
-        "S5: Configuration avancée d'Outlook pour avocats",
-        "S6: Automatisation du tri et traitement des emails",
-        "S7: Gestion intelligente des rendez-vous et calendriers",
-        "S8: Intégration des outils de communication"
+        "Semaine 3: Organisation de vos documents dans NotebookLM",
+        "Semaine 4: Recherche avancée dans vos dossiers personnels"
       ]
     },
     {
       id: 3,
-      title: "Rédaction assistée",
-      weeks: "S9-12",
-      description: "Actes, CR, synthèses",
+      title: "Workflows intégrés",
+      weeks: "Semaines 5-6",
+      description: "Combinez ChatGPT + NotebookLM",
       color: "bg-purple-500/20 border-purple-500/30",
       lessons: [
-        "S9: Templates d'actes juridiques avec IA",
-        "S10: Rédaction assistée de comptes-rendus",
-        "S11: Synthèses automatiques de documents complexes",
-        "S12: Révision et validation des documents IA"
-      ]
-    },
-    {
-      id: 4,
-      title: "Automatisations avancées",
-      weeks: "S13-16",
-      description: "Tableaux de bord, alertes délais",
-      color: "bg-orange-500/20 border-orange-500/30",
-      lessons: [
-        "S13: Création de tableaux de bord personnalisés",
-        "S14: Système d'alertes et de rappels intelligents",
-        "S15: Automatisation des délais et échéances",
-        "S16: Intégration avec les outils métier existants"
-      ]
-    },
-    {
-      id: 5,
-      title: "Sécurité & conformité",
-      weeks: "S17-20",
-      description: "PII, RGPD, traçabilité",
-      color: "bg-red-500/20 border-red-500/30",
-      lessons: [
-        "S17: Protection des données personnelles (PII)",
-        "S18: Conformité RGPD avec les outils IA",
-        "S19: Traçabilité et audit des processus IA",
-        "S20: Mise en place d'une politique de sécurité IA"
-      ]
-    },
-    {
-      id: 6,
-      title: "Projet capstone",
-      weeks: "S21-24",
-      description: "Cabinet prêt IA avec soutenance finale",
-      color: "bg-primary/20 border-primary/30",
-      lessons: [
-        "S21: Conception du projet de transformation IA",
-        "S22: Implémentation et tests des solutions",
-        "S23: Documentation et formation des équipes",
-        "S24: Soutenance finale et certification"
+        "Semaine 5: Création de workflows automatisés",
+        "Semaine 6: Optimisation de votre productivité quotidienne"
       ]
     }
   ]
 
   const deliverables = [
-    "Modèles de prompts juridiques personnalisés",
-    "Checklists de validation et contrôle qualité",
-    "Templates Outlook/Windows configurés",
-    "Playbook sécurité et conformité RGPD",
-    "Espace NotebookLM structuré et opérationnel",
-    "Tableaux de bord de suivi personnalisés",
-    "Documentation complète des processus",
-    "Plan de formation pour votre équipe"
+    "Bibliothèque de prompts juridiques personnalisés",
+    "Workflows ChatGPT + NotebookLM optimisés",
+    "Base de connaissances NotebookLM opérationnelle",
+    "Templates de documents automatisés",
+    "Guide de sécurité et confidentialité pour l'IA",
+    "Tableaux de bord de suivi de productivité",
+    "Documentation de vos processus IA",
+    "Support continu post-formation"
   ]
 
   const weeklyFormat = {
-    liveSession: "1 visio live/semaine (60-90 min)",
-    microLessons: "2 micro-leçons/semaine (10-15 min)",
-    practicalWork: "Devoir pratique appliqué au cabinet",
-    support: "Support Q/R 24h ouvrées"
+    liveSession: "1 visio live/semaine (45-60 min)",
+    microLessons: "3 micro-leçons/semaine (15-20 min)",
+    practicalWork: "Devoir pratique appliqué à vos dossiers réels",
+    support: "Support personnalisé et coaching individuel"
   }
 
   return (
@@ -125,8 +80,8 @@ export default function Module4() {
                 Retour
               </Button>
               <div>
-                <h1 className="text-2xl font-bold text-white">Module 4 : Formation complète 6 mois</h1>
-                <p className="text-muted-foreground">Parcours complet Débutant → Expert avec certification finale</p>
+                <h1 className="text-2xl font-bold text-white">Module 4 : Mise en pratique & certification</h1>
+                <p className="text-muted-foreground">Appliquez ChatGPT et NotebookLM à vos dossiers réels sur 6 semaines</p>
               </div>
             </div>
             <div className="flex items-center space-x-4">
@@ -135,8 +90,8 @@ export default function Module4() {
                 Formation Premium
               </Badge>
               <div className="text-right">
-                <div className="text-sm font-medium">Semaine actuelle</div>
-                <div className="text-sm text-primary">S{currentWeek}/24</div>
+                                  <div className="text-sm font-medium">Semaine actuelle</div>
+                  <div className="text-sm text-primary">S{currentWeek}/6</div>
               </div>
             </div>
           </div>
@@ -260,9 +215,9 @@ export default function Module4() {
                 <div>
                   <div className="flex justify-between mb-2">
                     <span className="text-sm font-medium">Progression globale</span>
-                    <span className="text-sm text-muted-foreground">{Math.round((completedWeeks.length / 24) * 100)}%</span>
+                    <span className="text-sm text-muted-foreground">{Math.round((completedWeeks.length / 6) * 100)}%</span>
                   </div>
-                  <Progress value={(completedWeeks.length / 24) * 100} className="h-3" />
+                  <Progress value={(completedWeeks.length / 6) * 100} className="h-3" />
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-4">
@@ -315,8 +270,8 @@ export default function Module4() {
                 <div className="mx-auto mb-4">
                   <Trophy className="h-16 w-16 text-primary" />
                 </div>
-                <CardTitle className="text-2xl text-primary">Certification finale</CardTitle>
-                <CardDescription className="text-lg">Praticien IA Cabinet Individuel — niveau Expert</CardDescription>
+                <CardTitle className="text-2xl text-primary">Certification IA pour avocats</CardTitle>
+                <CardDescription className="text-lg">Spécialiste ChatGPT & NotebookLM — niveau Praticien</CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="text-center">

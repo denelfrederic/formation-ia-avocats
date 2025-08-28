@@ -22,7 +22,7 @@ export default function Module1() {
       title: "Introduction à l'automatisation pour avocats",
       duration: "15 min",
       content: {
-        overview: "Découvrez comment l'automatisation peut transformer votre pratique quotidienne et vous faire gagner des heures précieuses.",
+        overview: "Découvrez comment l'automatisation peut transformer votre pratique quotidienne et vous faire gagner des heures précieuses chaque jour.",
         objectives: [
           "Comprendre les enjeux de l'automatisation dans un cabinet d'avocat",
           "Identifier les tâches répétitives à automatiser en priorité",
@@ -37,73 +37,37 @@ export default function Module1() {
     },
     {
       id: 1,
-      title: "Configuration Outlook avancée",
-      duration: "25 min",
+      title: "Premiers pas avec l'automatisation",
+      duration: "20 min",
       content: {
-        overview: "Maîtrisez les fonctionnalités avancées d'Outlook pour automatiser la gestion de vos emails et optimiser votre productivité.",
+        overview: "Apprenez les bases de l'automatisation : organiser vos emails, gérer votre agenda et créer des modèles de documents.",
         objectives: [
-          "Configurer des règles de tri automatique intelligentes",
-          "Paramétrer les réponses automatiques contextuelles",
-          "Organiser efficacement vos dossiers et catégories"
+          "Configurer des règles simples de tri automatique des emails",
+          "Paramétrer des rappels automatiques pour vos échéances",
+          "Créer vos premiers modèles de documents réutilisables"
         ],
         keyPoints: [
           "Les règles Outlook peuvent traiter 90% des emails automatiquement",
-          "La catégorisation automatique améliore la recherche de 70%",
+          "Les rappels intelligents améliorent la ponctualité de 80%",
           "Les modèles de réponse font gagner 2h par jour"
         ]
       }
     },
     {
       id: 2,
-      title: "Règles de tri automatique",
-      duration: "30 min",
+      title: "Préparation à l'IA : Organiser son environnement de travail",
+      duration: "15 min",
       content: {
-        overview: "Créez des règles sophistiquées pour trier automatiquement vos emails selon vos critères métier spécifiques.",
+        overview: "Avant d'utiliser ChatGPT et NotebookLM efficacement, apprenez à organiser votre environnement de travail numérique.",
         objectives: [
-          "Créer des règles basées sur l'expéditeur, le sujet et le contenu",
-          "Paramétrer des actions automatiques (déplacement, marquage, réponse)",
-          "Gérer les exceptions et cas particuliers"
+          "Structurer vos dossiers et fichiers de manière logique",
+          "Mettre en place des conventions de nommage cohérentes",
+          "Préparer votre espace de travail pour l'intégration de l'IA"
         ],
         keyPoints: [
-          "Une règle bien configurée traite 100+ emails par jour",
-          "La combinaison de critères permet une précision de 95%",
-          "Les règles conditionnelles gèrent les cas complexes"
-        ]
-      }
-    },
-    {
-      id: 3,
-      title: "Intégration calendrier intelligent",
-      duration: "20 min",
-      content: {
-        overview: "Synchronisez et automatisez votre calendrier avec vos emails et tâches pour une gestion optimale du temps.",
-        objectives: [
-          "Automatiser la création de RDV depuis les emails",
-          "Configurer les rappels et notifications intelligents",
-          "Intégrer le calendrier avec vos outils métier"
-        ],
-        keyPoints: [
-          "L'automatisation calendrier réduit les oublis de 90%",
-          "La synchronisation multi-plateformes évite les conflits",
-          "Les rappels intelligents améliorent la ponctualité"
-        ]
-      }
-    },
-    {
-      id: 4,
-      title: "Automatisation des réponses",
-      duration: "25 min",
-      content: {
-        overview: "Configurez des réponses automatiques intelligentes et des templates personnalisés pour différents types de demandes.",
-        objectives: [
-          "Créer des templates de réponse par type de demande",
-          "Paramétrer des réponses automatiques contextuelles",
-          "Gérer les accusés de réception professionnels"
-        ],
-        keyPoints: [
-          "Les templates réduisent le temps de rédaction de 80%",
-          "Les réponses automatiques améliorent la réactivité client",
-          "La personnalisation maintient la relation humaine"
+          "Une bonne organisation multiplie l'efficacité de l'IA par 3",
+          "Les conventions de nommage facilitent l'automatisation",
+          "L'environnement de travail influence directement votre productivité"
         ]
       }
     }
@@ -112,7 +76,7 @@ export default function Module1() {
   const quiz = {
     questions: [
       {
-        question: "Quel pourcentage du temps d'un avocat est consacré aux tâches administratives ?",
+        question: "Quel pourcentage approximatif du temps d'un avocat est consacré aux tâches administratives ?",
         options: ["20%", "30%", "40%", "50%"],
         correct: 2
       },
@@ -122,9 +86,14 @@ export default function Module1() {
         correct: 2
       },
       {
-        question: "Quel pourcentage d'emails peut être traité automatiquement par l'IA ?",
-        options: ["60%", "70%", "80%", "90%"],
-        correct: 2
+        question: "Pourquoi une bonne organisation des fichiers est-elle importante avant d'utiliser l'IA ?",
+        options: [
+          "Pour faire joli sur l'ordinateur",
+          "Parce que l'IA travaille mieux avec des données bien structurées",
+          "Pour impressionner ses collègues",
+          "C'est complètement inutile"
+        ],
+        correct: 1
       }
     ]
   }
@@ -152,8 +121,8 @@ export default function Module1() {
                 Retour
               </Button>
               <div>
-                <h1 className="text-2xl font-bold text-white">Module 1 : Organisation & automatisation</h1>
-                <p className="text-muted-foreground">Maîtrisez l'automatisation des mails, rendez-vous et agendas</p>
+                <h1 className="text-2xl font-bold text-white">Module 1 : Gagner du temps au quotidien</h1>
+                <p className="text-muted-foreground">Découvrez comment automatiser vos tâches administratives sans connaissances techniques</p>
               </div>
             </div>
             <div className="flex items-center space-x-4">
@@ -394,19 +363,19 @@ function QuizContent({ quiz, onComplete, currentScore }: QuizContentProps) {
             </Button>
             <Button onClick={() => window.location.href = '/'}>
               Retour à l'accueil
+            </Button>
 
-          <div className="flex gap-4 mt-4">
-            <Button variant="outline" onClick={() => router.push('/modules/module2')}>
-              Module 2 →
-            </Button>
-            <Button variant="outline" onClick={() => router.push('/modules/module3')}>
-              Module 3 →
-            </Button>
-            <Button variant="outline" onClick={() => router.push('/modules/module4')}>
-              Module 4 →
-            </Button>
-          </div>
-            </Button>
+            <div className="flex gap-4 mt-4">
+              <Button variant="outline" onClick={() => window.location.href = '/modules/module2'}>
+                Module 2 →
+              </Button>
+              <Button variant="outline" onClick={() => window.location.href = '/modules/module3'}>
+                Module 3 →
+              </Button>
+              <Button variant="outline" onClick={() => window.location.href = '/modules/module4'}>
+                Module 4 →
+              </Button>
+            </div>
           </div>
         </CardContent>
       </Card>
