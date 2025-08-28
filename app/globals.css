@@ -1,26 +1,125 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
+@custom-variant dark (&:is(.dark *));
+
+/* Charte graphique Cactus Mentor */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --radius: 0.5rem;
+  
+  /* Couleurs principales */
+  --cactus-dark: #1E1E1E;
+  --cactus-green: #00C26E;
+  --cactus-light: #F5F5F5;
+  --cactus-white: #FFFFFF;
+  
+  /* Variables shadcn adaptées */
+  --background: var(--cactus-dark);
+  --foreground: var(--cactus-white);
+  --card: #2A2A2A;
+  --card-foreground: var(--cactus-white);
+  --popover: #2A2A2A;
+  --popover-foreground: var(--cactus-white);
+  --primary: var(--cactus-green);
+  --primary-foreground: var(--cactus-white);
+  --secondary: #3A3A3A;
+  --secondary-foreground: var(--cactus-white);
+  --muted: #3A3A3A;
+  --muted-foreground: #B0B0B0;
+  --accent: var(--cactus-green);
+  --accent-foreground: var(--cactus-white);
+  --destructive: #FF5252;
+  --destructive-foreground: var(--cactus-white);
+  --border: #3A3A3A;
+  --input: #3A3A3A;
+  --ring: var(--cactus-green);
+  
+  /* Charts */
+  --chart-1: var(--cactus-green);
+  --chart-2: #00A85A;
+  --chart-3: #008E4C;
+  --chart-4: #00743E;
+  --chart-5: #005A30;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -0.01em;
+  }
+  
+  /* Typography */
+  h1 {
+    @apply text-4xl md:text-6xl font-bold tracking-tight;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-5xl font-bold tracking-tight;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-4xl font-semibold tracking-tight;
+  }
+  
+  h4 {
+    @apply text-xl md:text-2xl font-semibold tracking-tight;
+  }
+  
+  p {
+    @apply text-base leading-relaxed text-muted-foreground;
+  }
+  
+  /* Animations */
+  .fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .glow {
+    box-shadow: 0 0 20px rgba(0, 194, 110, 0.3);
+  }
 }
