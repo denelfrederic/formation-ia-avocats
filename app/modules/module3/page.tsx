@@ -324,6 +324,46 @@ function LessonContent({ lesson, onComplete, isCompleted }: any) {
           </div>
         </div>
 
+        <div>
+          <h3 className="text-lg font-semibold mb-3">Exemple pratique</h3>
+          <Card className="bg-muted/30 border-muted">
+            <CardContent className="p-4">
+              <div className="space-y-3">
+                <div className="flex items-center gap-2">
+                  <div className="h-2 w-2 rounded-full bg-blue-500" />
+                  <span className="text-sm font-medium text-blue-500">Cas concret</span>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  {lesson.id === 0 && "Un avocat importe 200 contrats de cession de parts sociales dans NotebookLM. Il peut maintenant poser des questions comme 'Quels sont les points communs entre tous mes contrats ?' et obtenir des réponses instantanées."}
+                  {lesson.id === 1 && "Structure organisée : Dossiers 'Contrats commerciaux' → Sous-dossiers 'Cession parts', 'Bail commercial', 'Prestations services'. Métadonnées : Date, Montant, Type de client, Risques identifiés."}
+                  {lesson.id === 2 && "Recherche sémantique : 'Trouve tous les contrats qui parlent de garantie de passif' trouve même les documents qui utilisent 'garantie des dettes' ou 'responsabilité du cédant'."}
+                  {lesson.id === 3 && "Workflow intégré : Question sur un contrat → NotebookLM trouve l'info → ChatGPT génère une réponse enrichie avec vos connaissances personnelles → Réponse plus précise et contextuelle."}
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        <div>
+          <h3 className="text-lg font-semibold mb-3">Questions types à poser</h3>
+          <Card className="bg-gradient-to-r from-purple-500/10 to-purple-500/5 border-purple-500/20">
+            <CardContent className="p-4">
+              <div className="space-y-2">
+                <div className="flex items-center gap-2">
+                  <div className="h-2 w-2 rounded-full bg-purple-500" />
+                  <span className="text-sm font-medium text-purple-500">Testez ces questions</span>
+                </div>
+                <div className="bg-background p-3 rounded border text-xs font-mono">
+                  {lesson.id === 0 && "Quels sont les points communs entre tous mes contrats de cession de parts sociales ?"}
+                  {lesson.id === 1 && "Trouve tous les contrats qui contiennent des clauses de garantie de passif"}
+                  {lesson.id === 2 && "Quels sont les montants moyens de mes transactions commerciales ?"}
+                  {lesson.id === 3 && "Génère un résumé de mes pratiques contractuelles en matière de cession de parts"}
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
         <div className="flex justify-end pt-6">
           <Button onClick={onComplete} disabled={isCompleted}>
             {isCompleted ? (

@@ -387,6 +387,54 @@ function LessonContent({ lesson, onComplete, isCompleted }: any) {
           </div>
         </div>
 
+        <div>
+          <h3 className="text-lg font-semibold mb-3">Exemple pratique</h3>
+          <Card className="bg-muted/30 border-muted">
+            <CardContent className="p-4">
+              <div className="space-y-3">
+                <div className="flex items-center gap-2">
+                  <div className="h-2 w-2 rounded-full bg-blue-500" />
+                  <span className="text-sm font-medium text-blue-500">Cas concret</span>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  {lesson.id === 0 && "Un avocat reçoit 30 emails par jour. ChatGPT peut automatiquement catégoriser 24 d'entre eux (80%) et générer des réponses appropriées, économisant 2h de travail quotidien."}
+                  {lesson.id === 1 && "Prompt efficace : 'En tant qu'avocat spécialisé en droit des sociétés, rédige une lettre de mise en demeure pour un défaut de paiement de 50 000€. Ton client est une SARL, le débiteur est une SAS.'"}
+                  {lesson.id === 2 && "Un contrat de 25 pages peut être analysé en 3 minutes par ChatGPT, qui identifie automatiquement les clauses à risque et génère un résumé exécutif de 2 pages."}
+                  {lesson.id === 3 && "Au lieu de passer 2h à rédiger un acte de cession de parts sociales, ChatGPT génère un premier jet en 10 minutes, que l'avocat peut ensuite personnaliser et valider."}
+                  {lesson.id === 4 && "ChatGPT relit un courrier et détecte : 'Le délai de prescription est de 5 ans' → 'Le délai de prescription est de 3 ans en matière commerciale' (correction automatique)."}
+                  {lesson.id === 5 && "Workflow automatisé : Email de demande de rendez-vous → ChatGPT génère réponse + crée événement calendrier + envoie confirmation automatique."}
+                  {lesson.id === 6 && "Un avocat importe ses 50 contrats types dans NotebookLM. Il peut maintenant poser des questions comme 'Quels sont les points communs entre mes contrats de cession ?'"}
+                  {lesson.id === 7 && "Avant d'utiliser ChatGPT, un avocat anonymise les données : 'M. Dupont' devient 'Client A', 'SARL ABC' devient 'Société X'."}
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        <div>
+          <h3 className="text-lg font-semibold mb-3">Prompt type à tester</h3>
+          <Card className="bg-gradient-to-r from-green-500/10 to-green-500/5 border-green-500/20">
+            <CardContent className="p-4">
+              <div className="space-y-2">
+                <div className="flex items-center gap-2">
+                  <div className="h-2 w-2 rounded-full bg-green-500" />
+                  <span className="text-sm font-medium text-green-500">Copiez ce prompt</span>
+                </div>
+                <div className="bg-background p-3 rounded border text-xs font-mono">
+                  {lesson.id === 0 && "Tu es un assistant juridique spécialisé. Explique-moi en 3 points simples comment ChatGPT peut m'aider dans mon cabinet d'avocat."}
+                  {lesson.id === 1 && "En tant qu'avocat en droit civil, rédige un prompt efficace pour analyser un contrat de bail commercial. Le prompt doit être précis et juridiquement correct."}
+                  {lesson.id === 2 && "Analyse ce contrat [COLLER VOTRE CONTRAT] et identifie : 1) Les clauses à risque 2) Les obligations principales 3) Les points d'attention pour mon client."}
+                  {lesson.id === 3 && "Rédige un courrier de relance pour un client qui n'a pas payé une facture de 15 000€ depuis 3 mois. Ton client est une SARL, le débiteur est une SAS."}
+                  {lesson.id === 4 && "Relis ce texte juridique [COLLER VOTRE TEXTE] et corrige les erreurs de droit, améliore le style et suggère des améliorations."}
+                  {lesson.id === 5 && "Crée un workflow automatisé pour répondre aux demandes de rendez-vous de mes clients. Inclus la génération de réponse, la création d'événement et l'envoi de confirmation."}
+                  {lesson.id === 6 && "Explique-moi comment organiser mes documents juridiques dans NotebookLM pour une recherche optimale."}
+                  {lesson.id === 7 && "Liste les 5 règles d'or pour protéger la confidentialité de mes clients quand j'utilise ChatGPT."}
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
         <div className="flex justify-end pt-6">
           <Button onClick={onComplete} disabled={isCompleted}>
             {isCompleted ? (

@@ -282,6 +282,36 @@ function LessonContent({ lesson, onComplete, isCompleted }: LessonContentProps) 
           </div>
         </div>
 
+        <div>
+          <h3 className="text-lg font-semibold mb-3">Exemple pratique</h3>
+          <Card className="bg-muted/30 border-muted">
+            <CardContent className="p-4">
+              <div className="space-y-3">
+                <div className="flex items-center gap-2">
+                  <div className="h-2 w-2 rounded-full bg-blue-500" />
+                  <span className="text-sm font-medium text-blue-500">Situation réelle</span>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  {lesson.id === 0 && "Un avocat en droit des affaires passe 2h par jour à répondre aux mêmes emails de demandes de rendez-vous. Avec l'automatisation, il peut créer une réponse type et l'envoyer en 30 secondes."}
+                  {lesson.id === 1 && "Avant : 50 emails non triés dans la boîte de réception. Après : emails automatiquement rangés dans des dossiers 'Clients', 'Urgences', 'Facturation'. Gain de temps : 15 minutes par jour."}
+                  {lesson.id === 2 && "Un cabinet organise ses dossiers clients avec des conventions de nommage : 'CLIENT_2024_001_DOSSIER'. L'IA peut alors facilement identifier et traiter chaque type de document."}
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        <div>
+          <h3 className="text-lg font-semibold mb-3">Prochaines étapes</h3>
+          <div className="bg-gradient-to-r from-primary/10 to-primary/5 p-4 rounded-lg border border-primary/20">
+            <p className="text-sm text-muted-foreground">
+              {lesson.id === 0 && "Dans la prochaine leçon, vous apprendrez à configurer des règles simples pour automatiser le tri de vos emails."}
+              {lesson.id === 1 && "La prochaine leçon vous montrera comment créer des réponses automatiques pour gagner encore plus de temps."}
+              {lesson.id === 2 && "Vous êtes maintenant prêt à découvrir ChatGPT et NotebookLM dans les modules suivants !"}
+            </p>
+          </div>
+        </div>
+
         <div className="flex justify-end pt-6">
           <Button onClick={onComplete} disabled={isCompleted}>
             {isCompleted ? (
