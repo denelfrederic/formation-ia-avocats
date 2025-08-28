@@ -1,87 +1,98 @@
-# Site Formation IA pour Cabinet CNR Avocats
+# 🤖 Formation IA & Organisation pour Avocats
 
-## 🎯 Objectif
-Site de formation spécialisé pour les cabinets d'avocats souhaitant intégrer l'intelligence artificielle dans leur pratique quotidienne.
+Une plateforme de formation moderne dédiée aux avocats souhaitant intégrer l'intelligence artificielle dans leur pratique quotidienne.
 
 ## 🚀 Fonctionnalités
 
-### Structure du site
-- **Hero section** : "IA & Organisation pour Avocats"
-- **Problématiques** : 4 défis quotidiens des avocats
-- **Solutions IA** : Automatisation, NotebookLM, ateliers, coaching
-- **ROI concret** : 3 exemples d'analyse documentaire avec gains de temps
-- **Modules interactifs** : 4 modules de formation avec quiz et suivi de progression
+- ✅ **4 modules de formation** complets et interactifs
+- ✅ **Navigation libre** entre les modules
+- ✅ **Système de progression** avec suivi des avancées
+- ✅ **Quiz interactifs** avec scores
+- ✅ **Réinitialisation du parcours** pour recommencer
+- ✅ **Interface moderne** avec design responsive
+- ✅ **Thème sombre/clair** adaptatif
 
-### Modules de formation
-1. **Module 1** : Organisation & automatisation (mails/RDV/agendas)
-2. **Module 2** : Gestion documentaire & confidentialité (NotebookLM)
-3. **Module 3** : Productivité IA pour avocats (synthèses, rédaction, veille)
-4. **Module 4** : Formation complète 6 mois (débutant → expert)
+## 📚 Modules de Formation
 
-### Formation 6 mois - Parcours détaillé
-- **S1-4** : Fondamentaux IA pour avocats
-- **S5-8** : Automatisations simples
-- **S9-12** : Rédaction assistée
-- **S13-16** : Automatisations avancées
-- **S17-20** : Sécurité & conformité
-- **S21-24** : Projet capstone avec certification finale
+### Module 1 : Organisation & Automatisation
+- Optimisation de l'organisation quotidienne avec l'IA
+- 5 leçons - 2h30 de contenu
 
-## 🎨 Design
-- **Charte graphique** : Inspirée de Cactus Mentor
-- **Couleurs** : Fonds sombres (#1E1E1E), accents verts (#00C26E)
-- **Police** : Inter avec espacement optimisé
-- **Style** : Sobre, professionnel et rassurant
+### Module 2 : Gestion Documentaire & Confidentialité
+- Maîtrise de la gestion sécurisée des documents
+- 4 leçons - 2h00 de contenu
 
-## 🛠️ Technologies
-- **Framework** : Next.js 14 avec App Router
-- **UI** : shadcn/ui + Tailwind CSS
-- **Langage** : TypeScript
-- **Animations** : Framer Motion (intégré)
-- **Icons** : Lucide React
+### Module 3 : Productivité IA pour Avocats
+- Outils IA spécialisés pour booster la productivité
+- 4 leçons - 2h15 de contenu
 
-## 🚀 Installation et développement
+### Module 4 : Formation Complète 6 Mois (Premium)
+- Programme premium avec suivi personnalisé
+- 24 leçons - 50h00 de contenu
+
+## 🛠️ Technologies Utilisées
+
+- **Next.js 15** - Framework React moderne
+- **TypeScript** - Typage statique
+- **Tailwind CSS** - Framework CSS utilitaire
+- **Shadcn/UI** - Composants UI modernes
+- **Lucide React** - Icônes vectorielles
+- **Framer Motion** - Animations fluides
+
+## 🚀 Installation et Développement
 
 ```bash
 # Cloner le repository
-git clone https://github.com/denelfrederic/formation-ia-avocats.git
+git clone https://github.com/votre-username/formation-ia-avocats.git
 
 # Installer les dépendances
 cd formation-ia-avocats
-bun install
+npm install
 
 # Lancer le serveur de développement
-bun dev
+npm run dev
 ```
 
-Le site sera accessible sur `http://localhost:3000`
+Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur.
 
 ## 📦 Déploiement
 
-### GitHub Pages
-```bash
-# Build du projet
-bun build
+Le site est automatiquement déployé sur GitHub Pages via GitHub Actions lors de chaque push sur la branche `main`.
 
-# Export statique
-bun export
-```
+### URL de production
+🌐 **[https://votre-username.github.io/formation-ia-avocats](https://votre-username.github.io/formation-ia-avocats)**
 
-### Vercel (recommandé)
-```bash
-# Déploiement automatique via GitHub
-vercel --prod
-```
+## 🔄 Fonctionnalité de Réinitialisation
 
-## 🎯 Fonctionnalités interactives
-- ✅ Onglets de modules avec changement de contenu
-- ✅ Barres de progression pour chaque module
-- ✅ Quiz intégrés (interface prête)
-- ✅ Système de mémorisation des scores
-- ✅ Animations et effets visuels (glow, fade-in)
-- ✅ Design responsive
+La plateforme inclut une fonctionnalité de réinitialisation complète du parcours :
+- Remise à zéro de toutes les progressions
+- Suppression des scores de quiz
+- Confirmation de sécurité avant action
+- Message de confirmation après réinitialisation
 
-## 📝 Crédits
-Site réalisé par [Cactus Mentor](https://www.cactusmentor.com/)
+## 📱 Responsive Design
+
+L'interface s'adapte parfaitement à tous les écrans :
+- 📱 Mobile (320px+)
+- 📱 Tablette (768px+)
+- 💻 Desktop (1024px+)
+- 🖥️ Large Desktop (1440px+)
+
+## 🎨 Personnalisation
+
+Le thème peut être facilement personnalisé via :
+- Variables CSS dans `globals.css`
+- Configuration Tailwind dans `tailwind.config.js`
+- Composants Shadcn/UI dans `/components/ui`
 
 ## 📄 Licence
-Tous droits réservés - Cabinet CNR Avocats
+
+Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
+
+## 👨‍💻 Auteur
+
+Développé avec ❤️ pour la formation des avocats à l'IA moderne.
+
+---
+
+⭐ **N'hésitez pas à mettre une étoile si ce projet vous plaît !**
