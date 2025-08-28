@@ -1,0 +1,440 @@
+'use client'
+
+import { useState } from 'react'
+import { useRouter } from 'next/navigation'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Progress } from '@/components/ui/progress'
+import { Badge } from '@/components/ui/badge'
+import { Separator } from '@/components/ui/separator'
+import { CheckCircle, ArrowLeft, Play, Shield, Clock, Award, FileText, Lock, Database } from 'lucide-react'
+
+export default function Module2() {
+  const router = useRouter()
+  const [currentLesson, setCurrentLesson] = useState(0)
+  const [completedLessons, setCompletedLessons] = useState([])
+  const [quizStarted, setQuizStarted] = useState(false)
+  const [quizScore, setQuizScore] = useState<number | null>(null)
+
+  const lessons = [
+    {
+      id: 0,
+      title: "Introduction à NotebookLM pour avocats",
+      duration: "20 min",
+      content: {
+        overview: "Découvrez NotebookLM, l'outil IA de Google conçu pour organiser et analyser vos documents juridiques de manière sécurisée.",
+        objectives: [
+          "Comprendre les avantages de NotebookLM pour la pratique juridique",
+          "Maîtriser l'interface et les fonctionnalités principales",
+          "Configurer votre premier notebook juridique"
+        ],
+        keyPoints: [
+          "NotebookLM peut analyser jusqu'à 50 documents simultanément",
+          "L'outil respecte la confidentialité : vos données ne sont pas utilisées pour l'entraînement",
+          "Génération automatique de synthèses et de questions pertinentes"
+        ]
+      }
+    },
+    {
+      id: 1,
+      title: "Structuration des dossiers clients",
+      duration: "30 min",
+      content: {
+        overview: "Apprenez à organiser efficacement vos dossiers clients dans NotebookLM pour une recherche et une analyse optimales.",
+        objectives: [
+          "Créer une architecture de dossiers cohérente",
+          "Utiliser les tags et métadonnées efficacement",
+          "Établir des conventions de nommage standardisées"
+        ],
+        keyPoints: [
+          "Une structure claire améliore la recherche de 85%",
+          "Les métadonnées permettent un tri automatique intelligent",
+          "La standardisation facilite la collaboration en équipe"
+        ]
+      }
+    },
+    {
+      id: 2,
+      title: "Confidentialité et RGPD",
+      duration: "25 min",
+      content: {
+        overview: "Maîtrisez les aspects de confidentialité et de conformité RGPD lors de l'utilisation d'outils IA dans votre pratique juridique.",
+        objectives: [
+          "Comprendre les enjeux de confidentialité avec l'IA",
+          "Appliquer les principes RGPD aux outils IA",
+          "Mettre en place des procédures de sécurité"
+        ],
+        keyPoints: [
+          "NotebookLM ne stocke pas vos données au-delà de la session",
+          "Anonymisation des données sensibles avant traitement",
+          "Audit trail complet pour la conformité"
+        ]
+      }
+    },
+    {
+      id: 3,
+      title: "Recherche intelligente dans les documents",
+      duration: "35 min",
+      content: {
+        overview: "Exploitez la puissance de la recherche sémantique pour retrouver instantanément les informations pertinentes dans vos documents.",
+        objectives: [
+          "Maîtriser la recherche par concepts et non par mots-clés",
+          "Utiliser les filtres avancés et les requêtes complexes",
+          "Créer des recherches sauvegardées pour les cas récurrents"
+        ],
+        keyPoints: [
+          "La recherche sémantique trouve des concepts même sans mots-clés exacts",
+          "Les filtres temporels et par type de document affinent les résultats",
+          "Les recherches sauvegardées automatisent les tâches répétitives"
+        ]
+      }
+    }
+  ]
+
+  const quiz = {
+    questions: [
+      {
+        question: "Combien de documents NotebookLM peut-il analyser simultanément ?",
+        options: ["20 documents", "30 documents", "50 documents", "100 documents"],
+        correct: 2
+      },
+      {
+        question: "Quelle est la principale garantie de confidentialité de NotebookLM ?",
+        options: [
+          "Chiffrement des données",
+          "Vos données ne sont pas utilisées pour l'entraînement",
+          "Stockage local uniquement",
+          "Accès limité aux administrateurs"
+        ],
+        correct: 1
+      },
+      {
+        question: "De combien la recherche s'améliore-t-elle avec une structure claire ?",
+        options: ["65%", "75%", "85%", "95%"],
+        correct: 2
+      }
+    ]
+  }
+
+  const handleLessonComplete = (lessonId: number) => {
+    if (!completedLessons.includes(lessonId)) {
+      setCompletedLessons([...completedLessons, lessonId])
+    }
+    if (lessonId < lessons.length - 1) {
+      setCurrentLesson(lessonId + 1)
+    }
+  }
+
+  const progress = (completedLessons.length / lessons.length) * 100
+
+  return (
+    <div className="min-h-screen bg-background">
+      {/* Header */}
+      <div className="border-b border-border">
+        <div className="max-w-6xl mx-auto px-4 py-6">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-4">
+              <Button variant="ghost" size="sm" onClick={() => router.back()}>
+                <ArrowLeft className="h-4 w-4 mr-2" />
+                Retour
+              </Button>
+              <div>
+                <h1 className="text-2xl font-bold text-white">Module 2 : Gestion documentaire & confidentialité</h1>
+                <p className="text-muted-foreground">NotebookLM et structuration sécurisée des dossiers</p>
+              </div>
+            </div>
+            <div className="flex items-center space-x-4">
+              <Badge variant="outline">
+                <Shield className="h-4 w-4 mr-1" />
+                Module 2
+              </Badge>
+              <div className="text-right">
+                <div className="text-sm font-medium">Progression</div>
+                <div className="text-sm text-muted-foreground">{Math.round(progress)}%</div>
+              </div>
+            </div>
+          </div>
+          <div className="mt-4">
+            <Progress value={progress} className="h-2" />
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-6xl mx-auto px-4 py-8">
+        <div className="grid lg:grid-cols-4 gap-8">
+          {/* Sidebar - Lessons */}
+          <div className="lg:col-span-1">
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg">Leçons du module</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-2">
+                {lessons.map((lesson, index) => (
+                  <div
+                    key={lesson.id}
+                    className={`p-3 rounded-lg cursor-pointer transition-all ${
+                      currentLesson === index
+                        ? 'bg-primary/20 border border-primary'
+                        : 'bg-muted/50 hover:bg-muted'
+                    }`}
+                    onClick={() => setCurrentLesson(index)}
+                  >
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-2">
+                        {completedLessons.includes(index) ? (
+                          <CheckCircle className="h-4 w-4 text-primary" />
+                        ) : (
+                          <div className="h-4 w-4 rounded-full border-2 border-muted-foreground" />
+                        )}
+                        <span className="text-sm font-medium">Leçon {index + 1}</span>
+                      </div>
+                      <Clock className="h-3 w-3 text-muted-foreground" />
+                    </div>
+                    <div className="mt-1 text-xs text-muted-foreground">{lesson.title}</div>
+                    <div className="mt-1 text-xs text-primary">{lesson.duration}</div>
+                  </div>
+                ))}
+                
+                <Separator className="my-4" />
+                
+                <div
+                  className={`p-3 rounded-lg cursor-pointer transition-all ${
+                    quizStarted ? 'bg-primary/20 border border-primary' : 'bg-muted/50 hover:bg-muted'
+                  }`}
+                  onClick={() => setQuizStarted(true)}
+                >
+                  <div className="flex items-center space-x-2">
+                    <Award className="h-4 w-4 text-primary" />
+                    <span className="text-sm font-medium">Quiz final</span>
+                  </div>
+                  <div className="mt-1 text-xs text-muted-foreground">12 questions</div>
+                  {quizScore && (
+                    <Badge variant={quizScore >= 80 ? "default" : "secondary"} className="mt-2">
+                      Score: {quizScore}%
+                    </Badge>
+                  )}
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Main Content */}
+          <div className="lg:col-span-3">
+            {!quizStarted ? (
+              <LessonContent 
+                lesson={lessons[currentLesson]} 
+                onComplete={() => handleLessonComplete(currentLesson)}
+                isCompleted={completedLessons.includes(currentLesson)}
+              />
+            ) : (
+              <QuizContent 
+                quiz={quiz} 
+                onComplete={(score) => setQuizScore(score)}
+                currentScore={quizScore}
+              />
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+// Composants LessonContent et QuizContent identiques au Module 1
+function LessonContent({ lesson, onComplete, isCompleted }: any) {
+  return (
+    <Card>
+      <CardHeader>
+        <div className="flex items-center justify-between">
+          <div>
+            <CardTitle className="text-xl text-primary">{lesson.title}</CardTitle>
+            <CardDescription className="flex items-center mt-2">
+              <Clock className="h-4 w-4 mr-1" />
+              {lesson.duration}
+            </CardDescription>
+          </div>
+          {isCompleted && (
+            <Badge variant="default">
+              <CheckCircle className="h-4 w-4 mr-1" />
+              Terminé
+            </Badge>
+          )}
+        </div>
+      </CardHeader>
+      <CardContent className="space-y-6">
+        <div>
+          <h3 className="text-lg font-semibold mb-3">Vue d'ensemble</h3>
+          <p className="text-muted-foreground leading-relaxed">{lesson.content.overview}</p>
+        </div>
+
+        <div>
+          <h3 className="text-lg font-semibold mb-3">Objectifs d'apprentissage</h3>
+          <ul className="space-y-2">
+            {lesson.content.objectives.map((objective: string, index: number) => (
+              <li key={index} className="flex items-start">
+                <CheckCircle className="h-5 w-5 text-primary mr-2 mt-0.5 flex-shrink-0" />
+                <span className="text-muted-foreground">{objective}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-lg font-semibold mb-3">Points clés à retenir</h3>
+          <div className="grid gap-4">
+            {lesson.content.keyPoints.map((point: string, index: number) => (
+              <Card key={index} className="bg-primary/5 border-primary/20">
+                <CardContent className="p-4">
+                  <div className="flex items-start">
+                    <div className="h-2 w-2 rounded-full bg-primary mt-2 mr-3 flex-shrink-0" />
+                    <p className="text-sm font-medium">{point}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        <div className="flex justify-end pt-6">
+          <Button onClick={onComplete} disabled={isCompleted}>
+            {isCompleted ? (
+              <>
+                <CheckCircle className="h-4 w-4 mr-2" />
+                Leçon terminée
+              </>
+            ) : (
+              <>
+                <Play className="h-4 w-4 mr-2" />
+                Marquer comme terminé
+              </>
+            )}
+          </Button>
+        </div>
+      </CardContent>
+    </Card>
+  )
+}
+
+function QuizContent({ quiz, onComplete, currentScore }: any) {
+  const [currentQuestion, setCurrentQuestion] = useState(0)
+  const [answers, setAnswers] = useState<number[]>([])
+  const [showResults, setShowResults] = useState(false)
+
+  const handleAnswer = (answerIndex: number) => {
+    const newAnswers = [...answers]
+    newAnswers[currentQuestion] = answerIndex
+    setAnswers(newAnswers)
+  }
+
+  const handleNext = () => {
+    if (currentQuestion < quiz.questions.length - 1) {
+      setCurrentQuestion(currentQuestion + 1)
+    } else {
+      const correct = answers.reduce((acc, answer, index) => {
+        return acc + (answer === quiz.questions[index].correct ? 1 : 0)
+      }, 0)
+      const score = Math.round((correct / quiz.questions.length) * 100)
+      onComplete(score)
+      setShowResults(true)
+    }
+  }
+
+  const resetQuiz = () => {
+    setCurrentQuestion(0)
+    setAnswers([])
+    setShowResults(false)
+  }
+
+  if (showResults || currentScore) {
+    const score = currentScore || Math.round((answers.reduce((acc, answer, index) => {
+      return acc + (answer === quiz.questions[index].correct ? 1 : 0)
+    }, 0) / quiz.questions.length) * 100)
+
+    return (
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-xl text-primary">Résultats du Quiz</CardTitle>
+        </CardHeader>
+        <CardContent className="text-center space-y-6">
+          <div>
+            <div className="text-4xl font-bold text-primary mb-2">{score}%</div>
+            <p className="text-muted-foreground">
+              {score >= 80 ? 'Félicitations ! Vous avez réussi le quiz.' : 'Vous pouvez reprendre le quiz pour améliorer votre score.'}
+            </p>
+          </div>
+          
+          <div className="flex justify-center space-x-4">
+            <Button variant="outline" onClick={resetQuiz}>
+              Reprendre le quiz
+            </Button>
+            <Button onClick={() => window.location.href = '/'}>
+              Retour à l'accueil
+
+          <div className="flex gap-4 mt-4">
+            <Button variant="outline" onClick={() => router.push('/modules/module1')}>
+              ← Module 1
+            </Button>
+            <Button variant="outline" onClick={() => router.push('/modules/module3')}>
+              Module 3 →
+            </Button>
+            <Button variant="outline" onClick={() => router.push('/modules/module4')}>
+              Module 4 →
+            </Button>
+          </div>
+            </Button>
+          </div>
+        </CardContent>
+      </Card>
+    )
+  }
+
+  return (
+    <Card>
+      <CardHeader>
+        <div className="flex items-center justify-between">
+          <CardTitle className="text-xl text-primary">Quiz - Module 2</CardTitle>
+          <Badge variant="outline">
+            Question {currentQuestion + 1} / {quiz.questions.length}
+          </Badge>
+        </div>
+        <Progress value={((currentQuestion + 1) / quiz.questions.length) * 100} className="mt-4" />
+      </CardHeader>
+      <CardContent className="space-y-6">
+        <div>
+          <h3 className="text-lg font-semibold mb-4">{quiz.questions[currentQuestion].question}</h3>
+          <div className="space-y-3">
+            {quiz.questions[currentQuestion].options.map((option: string, index: number) => (
+              <div
+                key={index}
+                className={`p-4 rounded-lg border cursor-pointer transition-all ${
+                  answers[currentQuestion] === index
+                    ? 'border-primary bg-primary/10'
+                    : 'border-border hover:border-primary/50'
+                }`}
+                onClick={() => handleAnswer(index)}
+              >
+                <div className="flex items-center">
+                  <div className={`h-4 w-4 rounded-full border-2 mr-3 ${
+                    answers[currentQuestion] === index
+                      ? 'border-primary bg-primary'
+                      : 'border-muted-foreground'
+                  }`} />
+                  <span>{option}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="flex justify-end">
+          <Button 
+            onClick={handleNext}
+            disabled={answers[currentQuestion] === undefined}
+          >
+            {currentQuestion === quiz.questions.length - 1 ? 'Terminer le quiz' : 'Question suivante'}
+          </Button>
+        </div>
+      </CardContent>
+    </Card>
+  )
+}
