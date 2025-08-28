@@ -9,9 +9,20 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "🌵 Cactus Mentor - IA & Organisation pour Avocats",
+  title: "Cactus Mentor - IA & Organisation pour Avocats",
   description: "Optimisez votre temps et vos méthodes de travail grâce à l'intelligence artificielle. Formation spécialisée pour cabinets d'avocats avec Cactus Mentor.",
   keywords: "IA, avocats, formation, automatisation, NotebookLM, productivité juridique, cactus mentor",
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
+  manifest: '/manifest.json',
+  openGraph: {
+    title: "🌵 Cactus Mentor - IA & Organisation pour Avocats",
+    description: "Optimisez votre temps et vos méthodes de travail grâce à l'intelligence artificielle.",
+    type: 'website',
+  },
 };
 
 export default function RootLayout({

@@ -64,7 +64,7 @@ export default function Header() {
           {/* CTA Button */}
           <div className="flex items-center space-x-4">
             <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
-              🌟 Commencer 🌟
+              Commencer
             </Button>
           </div>
         </div>

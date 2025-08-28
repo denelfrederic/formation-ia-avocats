@@ -20,9 +20,9 @@ export default function Home() {
 
   const [quizScores, setQuizScores] = useState({
     module1: 85,
-    module2: null,
-    module3: null,
-    module4: null
+    module2: 0,
+    module3: 0,
+    module4: 0
   })
 
   const handleStartTraining = () => {
@@ -42,10 +42,10 @@ export default function Home() {
         module4: 0
       })
       setQuizScores({
-        module1: null,
-        module2: null,
-        module3: null,
-        module4: null
+        module1: 0,
+        module2: 0,
+        module3: 0,
+        module4: 0
       })
       alert("Parcours réinitialisé avec succès ! Vous pouvez recommencer depuis le début.")
     }
@@ -58,43 +58,43 @@ export default function Home() {
   const modules = [
     {
       id: 'module1',
-      title: '🌵 Organisation & Automatisation',
-      description: '💚 Optimisez votre organisation quotidienne avec l\'IA - Premier cactus de votre jardin !',
+      title: 'Gagner du temps au quotidien',
+      description: 'Automatisez vos tâches administratives sans connaissances techniques',
       icon: Mail,
       progress: moduleProgress.module1,
       score: quizScores.module1,
-      lessons: 5,
-      duration: '2h30'
+      lessons: 3,
+      duration: '51 min'
     },
     {
       id: 'module2',
-      title: '🌵 Gestion Documentaire & Confidentialité',
-      description: '🔒 Maîtrisez la gestion sécurisée de vos documents - Cactus protecteur !',
-      icon: Shield,
+      title: 'ChatGPT Pro pour avocats',
+      description: 'Maîtrisez l\'IA pour gagner du temps : gestion documentaire, rédaction, relecture',
+      icon: Brain,
       progress: moduleProgress.module2,
       score: quizScores.module2,
-      lessons: 4,
-      duration: '2h00'
+      lessons: 8,
+      duration: '4h00'
     },
     {
       id: 'module3',
-      title: '🌵 Productivité IA pour Avocats',
-      description: '🧠 Boostez votre productivité avec les outils IA spécialisés - Cactus intelligent !',
-      icon: Brain,
+      title: 'NotebookLM - Base de connaissances IA',
+      description: 'Organisez vos connaissances juridiques et boostez ChatGPT avec vos documents personnels',
+      icon: FileText,
       progress: moduleProgress.module3,
       score: quizScores.module3,
       lessons: 4,
-      duration: '2h15'
+      duration: '2h20'
     },
     {
       id: 'module4',
-      title: '🌵 Formation Complète 6 Mois',
-      description: '👑 Programme premium avec suivi personnalisé - Le roi des cactus !',
+      title: 'Mise en pratique & certification',
+      description: 'Appliquez ChatGPT et NotebookLM à vos dossiers réels sur 6 semaines',
       icon: Award,
       progress: moduleProgress.module4,
       score: quizScores.module4,
-      lessons: 24,
-      duration: '50h00',
+      lessons: 6,
+      duration: '6 semaines',
       premium: true
     }
   ]
@@ -108,22 +108,22 @@ export default function Home() {
             <span className="text-6xl mb-4">🌵</span>
           </div>
           <h1 className="mb-6 text-white">
-            🌵 <span className="text-primary">Cactus Mentor</span> 🌵<br/>
+            <span className="text-primary">Cactus Mentor</span><br/>
             <span className="text-2xl md:text-3xl">IA & Organisation pour Avocats</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-muted-foreground max-w-3xl mx-auto">
-            💚 Transformez votre pratique juridique avec l'intelligence artificielle.
-            Formations pratiques pour avocats modernes avec la puissance du cactus !
+            Transformez votre pratique juridique avec l'intelligence artificielle.
+            Formations pratiques pour avocats modernes !
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button
+                        <Button
               size="lg"
               onClick={handleStartTraining}
               className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 glow"
             >
               <Play className="mr-2 h-5 w-5" />
-              🌵 🚀 Commencer l'aventure cactus ! 🚀 🌵
+              🚀 Commencer la formation
             </Button>
           </div>
 
@@ -133,21 +133,21 @@ export default function Home() {
               <CardContent className="p-6 text-center">
                 <div className="text-3xl mb-2">📊</div>
                 <div className="text-3xl font-bold text-primary mb-2">{Math.round(totalProgress)}%</div>
-                <p className="text-muted-foreground">🌵 Progression cactus globale</p>
+                <p className="text-muted-foreground">Progression globale</p>
               </CardContent>
             </Card>
             <Card className="bg-card/50 backdrop-blur border-primary/20">
               <CardContent className="p-6 text-center">
                 <div className="text-3xl mb-2">🏆</div>
                 <div className="text-3xl font-bold text-primary mb-2">{completedModules}/4</div>
-                <p className="text-muted-foreground">🌵 Modules fleuris</p>
+                <p className="text-muted-foreground">Modules terminés</p>
               </CardContent>
             </Card>
             <Card className="bg-card/50 backdrop-blur border-primary/20">
               <CardContent className="p-6 text-center">
                 <div className="text-3xl mb-2">⏱️</div>
-                <div className="text-3xl font-bold text-primary mb-2">8h45</div>
-                <p className="text-muted-foreground">🌵 Temps d'arrosage</p>
+                <div className="text-3xl font-bold text-primary mb-2">7h11</div>
+                <p className="text-muted-foreground">Temps total</p>
               </CardContent>
             </Card>
           </div>
@@ -159,17 +159,17 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <Tabs defaultValue="modules" className="w-full">
             <TabsList className="grid w-full grid-cols-3 mb-8">
-              <TabsTrigger value="modules">🌵 📚 Modules Cactus</TabsTrigger>
-              <TabsTrigger value="progress">🌵 📊 Progression</TabsTrigger>
-              <TabsTrigger value="resources">🌵 📖 Oasis Ressources</TabsTrigger>
+              <TabsTrigger value="modules">📚 Modules</TabsTrigger>
+              <TabsTrigger value="progress">📊 Progression</TabsTrigger>
+              <TabsTrigger value="resources">📖 Ressources</TabsTrigger>
             </TabsList>
 
             <TabsContent value="modules" className="space-y-8">
-              {/* Section d'accès direct aux modules */}
+                            {/* Section d'accès direct aux modules */}
               <div className="text-center mb-8">
-                <h2 className="text-2xl font-bold mb-4">🌵 🎯 Jardin des Modules Cactus</h2>
+                <h2 className="text-2xl font-bold mb-4">🎯 Accès aux modules</h2>
                 <p className="text-muted-foreground mb-6">
-                  💚 Cliquez sur n'importe quel cactus pour explorer ses épines pédagogiques !
+                  Cliquez sur n'importe quel module pour commencer votre apprentissage
                 </p>
 
                 {/* Bouton de réinitialisation */}
@@ -180,7 +180,7 @@ export default function Home() {
                     className="border-red-500 text-red-500 hover:bg-red-500 hover:text-white"
                   >
                     <RotateCcw className="mr-2 h-4 w-4" />
-                    🌵 🔄 Réinitialiser le jardin
+                    🔄 Réinitialiser
                   </Button>
                 </div>
               </div>
@@ -228,12 +228,12 @@ export default function Home() {
                             </div>
                           )}
 
-                          <Button
+                                                    <Button
                             className="w-full"
                             variant={module.progress > 0 ? "default" : "outline"}
                             onClick={() => handleModuleAccess(module.id)}
                           >
-                            {module.progress > 0 ? "🌱 Continuer l'arrosage" : "🌵 Explorer le cactus"}
+                            {module.progress > 0 ? "Continuer" : "Commencer"}
                             <ChevronRight className="ml-2 h-4 w-4" />
                           </Button>
                         </div>
@@ -247,8 +247,8 @@ export default function Home() {
             <TabsContent value="progress" className="space-y-6">
               <Card>
                 <CardHeader>
-                  <CardTitle>🌵 📈 Croissance de votre Jardin Cactus</CardTitle>
-                  <CardDescription>💚 Suivez l'épanouissement de vos cactus pédagogiques</CardDescription>
+                  <CardTitle>📈 Votre progression</CardTitle>
+                  <CardDescription>Suivez vos avancées dans chaque module</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-6">
@@ -279,38 +279,38 @@ export default function Home() {
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
                       <FileText className="h-5 w-5" />
-                      🌵 📋 Oasis des Guides Cactus
+                      📋 Guides pratiques
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-3">
                       <div className="p-3 rounded-lg border hover:bg-muted/50 cursor-pointer transition-colors" onClick={() => router.push('/guides/guide-demarrage-ia')}>
                         <div className="flex items-center justify-between">
-                          <span className="text-sm font-medium">🌵 🚀 Guide de démarrage IA</span>
+                          <span className="text-sm font-medium">🚀 Guide de démarrage IA</span>
                           <ChevronRight className="h-4 w-4 text-muted-foreground" />
                         </div>
-                        <p className="text-xs text-muted-foreground mt-1">💚 Intégrez l'IA dans votre pratique en 5 étapes cactus</p>
+                        <p className="text-xs text-muted-foreground mt-1">Intégrez l'IA dans votre pratique en 5 étapes</p>
                       </div>
                       <div className="p-3 rounded-lg border hover:bg-muted/50 cursor-pointer transition-colors" onClick={() => router.push('/guides/checklist-securite')}>
                         <div className="flex items-center justify-between">
-                          <span className="text-sm font-medium">🌵 🔒 Checklist sécurité cactus</span>
+                          <span className="text-sm font-medium">🔒 Checklist sécurité</span>
                           <ChevronRight className="h-4 w-4 text-muted-foreground" />
                         </div>
-                        <p className="text-xs text-muted-foreground mt-1">🛡️ Protégez vos données avec la force du cactus</p>
+                        <p className="text-xs text-muted-foreground mt-1">Protégez vos données et celles de vos clients</p>
                       </div>
                       <div className="p-3 rounded-lg border hover:bg-muted/50 cursor-pointer transition-colors" onClick={() => router.push('/guides/templates-prompts')}>
                         <div className="flex items-center justify-between">
-                          <span className="text-sm font-medium">🌵 📝 Templates prompts juridiques</span>
+                          <span className="text-sm font-medium">📝 Templates prompts juridiques</span>
                           <ChevronRight className="h-4 w-4 text-muted-foreground" />
                         </div>
-                        <p className="text-xs text-muted-foreground mt-1">✨ Prompts optimisés pour votre jardin juridique</p>
+                        <p className="text-xs text-muted-foreground mt-1">Prompts optimisés pour différents domaines du droit</p>
                       </div>
                       <div className="p-3 rounded-lg border hover:bg-muted/50 cursor-pointer transition-colors" onClick={() => router.push('/guides/bonnes-pratiques-ethiques')}>
                         <div className="flex items-center justify-between">
-                          <span className="text-sm font-medium">🌵 ⚖️ Éthique cactus</span>
+                          <span className="text-sm font-medium">⚖️ Bonnes pratiques éthiques</span>
                           <ChevronRight className="h-4 w-4 text-muted-foreground" />
                         </div>
-                        <p className="text-xs text-muted-foreground mt-1">🌱 Guide éthique pour une utilisation responsable</p>
+                        <p className="text-xs text-muted-foreground mt-1">Guide éthique pour une utilisation responsable</p>
                       </div>
                     </div>
                   </CardContent>
@@ -320,15 +320,15 @@ export default function Home() {
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
                       <Users className="h-5 w-5" />
-                      🌵 👥 Communauté Cactus
+                      👥 Communauté
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-2 text-sm">
-                      <li>🌵 • Forum des jardiniers cactus</li>
-                      <li>💚 • Sessions Q&A mensuelles</li>
-                      <li>🌱 • Groupe LinkedIn privé</li>
-                      <li>✨ • Webinaires exclusifs</li>
+                      <li>• Forum des participants</li>
+                      <li>• Sessions Q&A mensuelles</li>
+                      <li>• Groupe LinkedIn privé</li>
+                      <li>• Webinaires exclusifs</li>
                     </ul>
                   </CardContent>
                 </Card>

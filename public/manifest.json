@@ -1,0 +1,17 @@
+{
+  "name": "Cactus Mentor - IA & Organisation pour Avocats",
+  "short_name": "Cactus Mentor",
+  "description": "Optimisez votre temps et vos méthodes de travail grâce à l'intelligence artificielle",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#00C26E",
+  "theme_color": "#00C26E",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon",
+      "purpose": "any maskable"
+    }
+  ]
+}
